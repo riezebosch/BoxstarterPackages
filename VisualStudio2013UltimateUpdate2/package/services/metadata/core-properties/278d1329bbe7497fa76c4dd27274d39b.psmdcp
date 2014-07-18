@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"><dc:creator>Microsoft</dc:creator><dc:description>This silently installs Visual Studio 2013 Ultimate along with the Microsoft .Net 4.5.1 Framework SDK. 
+    ==================OPTIONAL FEATURES==================
+    All Optional Features such as Blend, Sql Dev tools, Web dev tools, etc. are not installed by default, but you can provide install arguments to add them. Here is an example that includes the Web Tools and the Windows 8 Store App SDK:
+
+    cinst VisualStudio2013Ultimate -InstallArguments "/Features:'WebTools Win8SDK' /ProductKey:AB1CD-EF2GH-IJ3KL-MN4OP-QR5ST"
+
+
+    You simply need to send a white space delimited list of the features to install via the InstallArguments parameter. Here are the available features:
+    Blend
+    LightSwitch
+    VC_MFC_Libraries
+    OfficeDeveloperTools
+    SQL
+    WebTools
+    Win8SDK
+    SilverLight_Developer_Kit
+    WindowsPhone80
+
+This package is based on the VisualStudio2013Ultimate package by mwrock</dc:description><dc:identifier>VisualStudio2013UltimateUpdate2</dc:identifier><version>1.0.0.2</version><keywords>Microsoft Visual Studio 2013 Ultimate IDE ALM, VS2013, VS2013 Ultimate, Update 2</keywords><dc:title>Visual Studio 2013 Ultimate with Update 2</dc:title><dc:subject>NuGet Package Explorer</dc:subject></coreProperties>
