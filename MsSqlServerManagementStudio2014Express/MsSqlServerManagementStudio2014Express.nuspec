@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MsSqlServerManagementStudio2014Express</id>
-        <version>1.0.4</version>
+        <version>1.0.5</version>
         <title>SQL Server 2014 Express Management Studio (UNATTENDED)</title>
         <authors>Microsoft</authors>
         <owners>Microsoft</owners>
@@ -13,7 +13,7 @@
 
 REMARK: This only installs SQL Server Express Management Tools. The SQL Server Express is provided in a seperate package!</description>
         <summary>Installs SQL Server Management Studio 2014 Express</summary>
-        <releaseNotes>Modified the extrat location because it seems to have issues when installing from a temp directory</releaseNotes>
+        <releaseNotes>Added /UPDATEENABLED=FALSE to setup arguments.</releaseNotes>
         <copyright />
         <language>en-US</language>
         <tags>sql,mssql,sql server,2014,express,ssms,management studio</tags>
