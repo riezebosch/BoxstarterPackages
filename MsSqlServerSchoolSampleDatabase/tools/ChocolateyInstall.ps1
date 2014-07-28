@@ -12,15 +12,14 @@ if ($env:chocolateyPackageParameters -Match "instance=([`"'])?([a-zA-Z0-9- _.\\]
         throw "Failed to find a SQL instance!"
     }
 }
-
 Write-Host "SQL instance: $instance"
 
-$installPath = (get-itemproperty -Path 'HKLM:\Software\Microsoft\Microsoft SQL Server\*\Tools\ClientSetup' -Name Path -ErrorAction SilentlyContinue).Path
-$sqlcmd = $installPath | gci -Filter sqlcmd.exe | select -last 1
+$clientsetup = (gci 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\*\Tools\ClientSetup' | gp)
+$sqltools = ($clientsetup | select -ExpandProperty Path -ea SilentlyContinue) + ($clientsetup | select -ExpandProperty ODBCToolsPath -ea SilentlyContinue)
+$sqlcmd =  $sqltools | gci -Filter sqlcmd.exe| select -last 1
 if ($sqlcmd -eq $null) {
     throw "SQLCMD not found!"
 }
-
 Write-Host "SQLCMD: $($sqlcmd.FullName)"
 
 $url = 'http://msdn.microsoft.com/en-US/library/bb399731(v=vs.100).aspx'

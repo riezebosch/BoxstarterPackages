@@ -27,7 +27,7 @@ Function Initialize-VS-Settings ($vsArgs, $unattendFile)
 }
 
 Function Get-VS-Installer-Args ($productKey='') {
-	$result = "/Passive /NoRestart /AdminFile $adminFile /Log $env:temp\vs.log"
+	$result = "/Passive /NoRestart /NoRefresh /NoWeb /AdminFile $adminFile /Log $env:temp\vs.log"
 	if($settings.ProductKey -ne "") {
 
 	    $result = "{0} /ProductKey {1}" -f $result, $settings.ProductKey

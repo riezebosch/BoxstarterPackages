@@ -18,4 +18,7 @@ REMARK: This only installs SQL Server Express Management Tools. The SQL Server E
         <language>en-US</language>
         <tags>sql,mssql,sql server,2014,express,ssms,management studio</tags>
     </metadata>
+  <files>
+    <file src="tools\**\*" target="tools" />
+  </files>
 </package>
