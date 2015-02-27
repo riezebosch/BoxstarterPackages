@@ -1,6 +1,6 @@
 $scriptPath = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$exePath = "$scriptPath\SQLEXPR_x64_ENU.exe"
-$extractPath = "$scriptPath\SQLEXPR_x64_ENU"
+$exePath = "$scriptPath\SQLEXPR_x86_ENU.exe"
+$extractPath = "$scriptPath\SQLEXPR_x86_ENU"
 $setupPath = "$extractPath\setup.exe"
 
 Write-Host "Extracting..."

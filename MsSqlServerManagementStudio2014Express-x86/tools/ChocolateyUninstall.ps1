@@ -1,13 +1,13 @@
 $scriptPath = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$exePath = "$scriptPath\SQLEXPR_x64_ENU.exe"
-$extractPath = "$scriptPath\SQLEXPR_x64_ENU"
+$exePath = "$scriptPath\SQLManagementStudio_x86_ENU.exe"
+$extractPath = "$scriptPath\SQLManagementStudio_x86_ENU"
 $setupPath = "$extractPath\setup.exe"
-
+ 
 Write-Host "Extracting..."
 Start-Process "$exePath" "/Q /x:`"$extractPath`"" -Wait
 
 Write-Host "Uninstalling..."
-& "$setupPath" /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQL /Q /ACTION=uninstall
+& "$setupPath" /IACCEPTSQLSERVERLICENSETERMS /FEATURES=Tools /Q /ACTION=uninstall
 
 Write-Host "Removing extracted files..."
 rm -r "$extractPath"

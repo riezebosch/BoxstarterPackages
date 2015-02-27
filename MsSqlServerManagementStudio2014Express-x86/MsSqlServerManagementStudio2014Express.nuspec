@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>MsSqlServerManagementStudio2014Express-x86</id>
+        <version>1.0.6</version>
+        <title>SQL Server 2014 Express Management Studio x86 (UNATTENDED)</title>
+        <authors>Microsoft</authors>
+        <owners>Microsoft</owners>
+        <projectUrl>http://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx#fbid=UP-ogD7ptCn</projectUrl>
+        <iconUrl>http://i.msdn.microsoft.com/aa972637.SQLsvr_waffle(en-us,MSDN.10).png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>SQL Server 2014 Express is a free edition of SQL Server that is ideal for learning, developing, and powering desktop, web, and small server applications and for redistribution by ISVs.
+
+REMARK: This only installs SQL Server Express Management Tools. The SQL Server Express is provided in a seperate package!
+
+My packages are available on https://github.com/riezebosch/BoxstarterPackages.git. You can fork this repository and suggest improvements using pull requests.
+		</description>
+        <summary>Installs SQL Server Management Studio 2014 Express</summary>
+		<releaseNotes>Package to install the 32 bits version of SQL Server 2014 Express</releaseNotes>
+        <copyright />
+        <language>en-US</language>
+        <tags>sql,mssql,sql server,2014,express,ssms,management studio</tags>
+    </metadata>
+  <files>
+    <file src="tools\**\*" target="tools" />
+  </files>
+</package>

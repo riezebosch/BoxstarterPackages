@@ -6,7 +6,7 @@ $setupPath = "$extractPath\setup.exe"
 Write-Host "Extracting..."
 Start-Process "$exePath" "/Q /x:`"$extractPath`"" -Wait
 
-Write-Host "Installing..."
+Write-Host "Uninstalling..."
 & "$setupPath" /IACCEPTSQLSERVERLICENSETERMS /FEATURES=Tools /Q /ACTION=uninstall
 
 Write-Host "Removing extracted files..."
