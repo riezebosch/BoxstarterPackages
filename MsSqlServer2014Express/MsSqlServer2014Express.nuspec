@@ -1,17 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>MsSqlServer2014ExpressLocal</id>
-        <version>1.0.4</version>
-        <title>SQL Server 2014 Express (UNATTENDED)</title>
+        <id>MsSqlServer2014Express</id>
+        <version>1.0.5</version>
+        <title>SQL Server 2014 Express x64 (UNATTENDED)</title>
         <authors>Microsoft</authors>
         <owners>Microsoft</owners>
         <projectUrl>http://msdn.microsoft.com/nl-nl/evalcenter/dn434042.aspx</projectUrl>
         <iconUrl>http://i.msdn.microsoft.com/aa972637.SQLsvr_waffle(en-us,MSDN.10).png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>SQL Server 2014 Express is a free edition of SQL Server that is ideal for learning, developing, and powering desktop, web, and small server applications and for redistribution by ISVs.</description>
+        <description>
+			SQL Server 2014 Express is a free edition of SQL Server that is ideal for learning, developing, and powering desktop, web, and small server applications and for redistribution by ISVs.
+			
+			My packages are available on https://github.com/riezebosch/BoxstarterPackages.git. You can fork this repository and suggest improvements using pull requests.
+		</description>
         <summary>Installs SQL Server 2014 Express</summary>
-        <releaseNotes></releaseNotes>
+        <releaseNotes>Use /Q instead of /QS to support unattended install better.</releaseNotes>
         <copyright />
         <language>en-US</language>
         <tags>sql,mssql,sql server,2014,express</tags>

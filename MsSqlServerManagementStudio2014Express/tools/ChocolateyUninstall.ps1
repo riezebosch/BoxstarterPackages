@@ -7,7 +7,7 @@ Write-Host "Extracting..."
 Start-Process "$exePath" "/Q /x:`"$extractPath`"" -Wait
 
 Write-Host "Installing..."
-& "$setupPath" /IACCEPTSQLSERVERLICENSETERMS /FEATURES=Tools /QS /ACTION=uninstall
+& "$setupPath" /IACCEPTSQLSERVERLICENSETERMS /FEATURES=Tools /Q /ACTION=uninstall
 
 Write-Host "Removing extracted files..."
 rm -r "$extractPath"
