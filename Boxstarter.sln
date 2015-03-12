@@ -16,10 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsSqlServerSchoolSampleDatabase", "MsSqlServerSchoolSampleDatabase\MsSqlServerSchoolSampleDatabase.csproj", "{63C80337-4610-491A-9066-257FAEBF03A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsSqlServer2014Express-x86", "MsSqlServer2014Express-x86\MsSqlServer2014Express-x86.csproj", "{3CFBE8BC-EAD7-4EAE-9F70-28D0840708A4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsSqlServerManagementStudio2014Express-x86", "MsSqlServerManagementStudio2014Express-x86\MsSqlServerManagementStudio2014Express-x86.csproj", "{816FC997-A6E3-4DA7-8234-810D5825C9B3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,14 +38,6 @@ Global
 		{63C80337-4610-491A-9066-257FAEBF03A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63C80337-4610-491A-9066-257FAEBF03A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63C80337-4610-491A-9066-257FAEBF03A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3CFBE8BC-EAD7-4EAE-9F70-28D0840708A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CFBE8BC-EAD7-4EAE-9F70-28D0840708A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CFBE8BC-EAD7-4EAE-9F70-28D0840708A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CFBE8BC-EAD7-4EAE-9F70-28D0840708A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{816FC997-A6E3-4DA7-8234-810D5825C9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{816FC997-A6E3-4DA7-8234-810D5825C9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{816FC997-A6E3-4DA7-8234-810D5825C9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{816FC997-A6E3-4DA7-8234-810D5825C9B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
