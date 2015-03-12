@@ -30,15 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="MsSqlServerManagementStudio2014Express.nuspec" />
     <None Include="package\services\metadata\core-properties\80bac4458be64627982a8a956926dae5.psmdcp" />
     <None Include="tools\ChocolateyInstall.ps1" />
@@ -47,7 +38,7 @@
   <ItemGroup>
     <Content Include="[Content_Types].xml" />
   </ItemGroup>
-  <Import Project="..\BuildPackage.proj"/>
+  <Import Project="..\BuildPackage.proj" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
