@@ -1,24 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>MsSqlServer2014Express</id>
-        <version>12.0.2000.8</version>
-        <title>SQL Server 2014 Express x64 (UNATTENDED)</title>
+		<id>MsSqlServer2014Express</id>
+		<version>12.0.2000.8</version>
+        <title>SQL Server 2014 Express</title>
         <authors>Microsoft</authors>
         <owners>Microsoft</owners>
         <projectUrl>http://msdn.microsoft.com/nl-nl/evalcenter/dn434042.aspx</projectUrl>
-        <iconUrl>http://i.msdn.microsoft.com/aa972637.SQLsvr_waffle(en-us,MSDN.10).png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
-			SQL Server 2014 Express is a free edition of SQL Server that is ideal for learning, developing, and powering desktop, web, and small server applications and for redistribution by ISVs.
-			
+			This package installs SQL Server 2014 Express UNATTENDED! You can use install arguments to add additional arguments or override arguments to supply specific arguments.
+			For some reason I keep having troubles when installing this package directly but it is working with BoxStarter just fine (see this tweet for more info: https://twitter.com/mwrockx/status/402332003439091712).
+
 			My packages are available on https://github.com/riezebosch/BoxstarterPackages.git. You can fork this repository and suggest improvements using pull requests.
 		</description>
         <summary>Installs SQL Server 2014 Express</summary>
-        <releaseNotes>Use /Q instead of /QS to support unattended install better.</releaseNotes>
+        <releaseNotes>Support for -ia and -o for specifying arguments. Using /Q instead of /QS to support unattended install better.</releaseNotes>
         <copyright />
         <language>en-US</language>
-        <tags>sql,mssql,sql server,2014,express</tags>
+		<tags>mssql sql server 2014 express</tags>
     </metadata>
   <files>
     <file src="tools\**\*" target="tools" />

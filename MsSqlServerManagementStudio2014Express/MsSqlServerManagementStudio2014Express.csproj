@@ -32,8 +32,8 @@
   <ItemGroup>
     <None Include="MsSqlServerManagementStudio2014Express.nuspec" />
     <None Include="package\services\metadata\core-properties\80bac4458be64627982a8a956926dae5.psmdcp" />
-    <None Include="tools\ChocolateyInstall.ps1" />
-    <None Include="tools\ChocolateyUninstall.ps1" />
+    <None Include="tools\chocolateyInstall.ps1" />
+    <None Include="tools\chocolateyUninstall.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="[Content_Types].xml" />
