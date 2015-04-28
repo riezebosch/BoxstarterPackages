@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>MsSqlServerSchoolSampleDatabase</id>
-        <version>1.0.5</version>
-        <title>SQL Server School Sample Database</title>
+		<id>MsSqlServerSchoolSampleDatabase</id>
+		<version>1.0.5</version>
+        <title>SQL Server School Sample Database (from MSDN)</title>
         <authors>Microsoft</authors>
         <owners>Microsoft</owners>
         <projectUrl>http://msdn.microsoft.com/en-US/library/bb399731(v=vs.100).aspx</projectUrl>
-        <iconUrl>http://i.msdn.microsoft.com/aa972637.SQLsvr_waffle(en-us,MSDN.10).png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Downloads and executes the SQL script to create the school sample database.</description>
         <summary />
         <copyright />
         <language>en-US</language>
-        <tags>sql,mssql,sql server,school,school sample</tags>
+        <tags>mssql sql server school school sample database msdn</tags>
     </metadata>
 </package>
