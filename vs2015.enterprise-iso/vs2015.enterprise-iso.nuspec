@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>vs2015.rc-enterprise-iso</id>
-        <version>14.0.22823.00</version>
-        <title>Visual Studio Enterprise 2015 RC</title>
+        <id>vs2015.enterprise-iso</id>
+        <version>14.0.23107.10</version>
+        <title>Visual Studio Enterprise 2015</title>
         <authors>Microsoft</authors>
         <owners>Matt Wrock</owners>
         <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
@@ -11,7 +11,7 @@
         <iconUrl>https://github.com/mwrock/Chocolatey-Packages/raw/master/VisualStudio2012Ultimate/vs.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
-			This silently installs Visual Studio 2015 Ultimate from the ISO.
+			This silently installs Visual Studio 2015 Enterprise from the ISO.
 			==================OPTIONAL FEATURES==================
 			All Optional Features such as Blend, Sql Dev tools, Web dev tools, etc. are not installed by default, but you can provide install arguments to add them. Here is an example that includes the Web Tools and the Windows 8 Store App SDK:
 
@@ -33,9 +33,9 @@
 			You can cache the download by copying it to the %TEMP%\chocolatey\vs2013.4-ultimate-iso directory.
 
 			This package is based on the VisualStudio2013Ultimate package by mwrock</description>
-        <summary>Visual Studio Enterprise 2015 RC is the state-of-the-art development solution that empowers teams of all sizes to design and create compelling apps to delight users.</summary>
+        <summary>Visual Studio Enterprise 2015 is the state-of-the-art development solution that empowers teams of all sizes to design and create compelling apps to delight users.</summary>
         <releaseNotes>Simplified the regex matching for features and product key</releaseNotes>
-        <tags>Microsoft Visual Studio 2015 Enterprise IDE ALM VS2015 RC</tags>
+        <tags>Microsoft Visual Studio 2015 Enterprise IDE ALM VS2015</tags>
         <dependencies>
         </dependencies>
     </metadata>

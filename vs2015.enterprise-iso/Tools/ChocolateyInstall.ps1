@@ -7,13 +7,13 @@ $env:chocolateyInstallArguments=""
 $settings = Initialize-VS-Settings $customArgs $adminFile
 $installerArgs = Get-VS-Installer-Args $settings.ProductKey
 
-$packageName = "vs2015.rc-enterprise-iso"
+$packageName = "vs2015.enterprise-iso"
 $chocolateyTempDir = Join-Path $env:TEMP "chocolatey"
 $tempDir = Join-Path $chocolateyTempDir $packageName
-$fileFullPath = "$tempDir\vs2015.rc_ent_enu.iso"
+$fileFullPath = "$tempDir\vs2015.ent_enu.iso"
 
 if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
-Get-ChocolateyWebFile $packageName $fileFullPath http://download.microsoft.com/download/C/A/A/CAA39018-05E5-49BA-8B24-4FC056EEA392/vs2015.rc_ent_enu.iso -Checksum "0596DF9E404E2F120815C37B39D3AA64B4189073" -ChecksumType "sha1"
+Get-ChocolateyWebFile $packageName $fileFullPath http://download.microsoft.com/download/6/4/7/647EC5B1-68BE-445E-B137-916A0AE51304/vs2015.ent_enu.iso -Checksum "07C949078F895CE0D9C03A1B8D55571A8C90AC94" -ChecksumType "sha1"
 
 Mount-DiskImage -ImagePath $fileFullPath
 $driveLetter = (Get-DiskImage $fileFullPath | Get-Volume).DriveLetter

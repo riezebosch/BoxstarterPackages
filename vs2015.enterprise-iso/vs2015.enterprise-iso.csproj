@@ -34,10 +34,12 @@
     <None Include="tools\ChocolateyInstall.ps1" />
     <None Include="tools\ChocolateyUninstall.ps1" />
     <None Include="tools\common.ps1" />
-    <None Include="vs2015.rc-enterprise-iso.nuspec" />
+    <None Include="vs2015.enterprise-iso.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="tools\AdminDeployment.xml" />
+    <Content Include="tools\AdminDeployment.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="[Content_Types].xml" />
   </ItemGroup>
   <Import Project="..\BuildPackage.proj" />
