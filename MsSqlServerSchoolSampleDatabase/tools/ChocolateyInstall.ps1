@@ -15,7 +15,7 @@ if ($env:chocolateyPackageParameters -Match "instance=([`"'])?([a-zA-Z0-9- _.\\]
 Write-Host "SQL instance: $instance"
 
 $clientsetup = (gci 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\*\Tools\ClientSetup' | gp)
-$sqltools = ($clientsetup | select -ExpandProperty Path -ea SilentlyContinue) + ($clientsetup | select -ExpandProperty ODBCToolsPath -ea SilentlyContinue)
+$sqltools = @() + ($clientsetup | select -ExpandProperty Path -ea SilentlyContinue) + ($clientsetup | select -ExpandProperty ODBCToolsPath -ea SilentlyContinue)
 $sqlcmd =  $sqltools | gci -Filter sqlcmd.exe| select -last 1
 if ($sqlcmd -eq $null) {
     throw "SQLCMD not found!"
