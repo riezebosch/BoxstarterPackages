@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vs2015.enterprise-iso", "vs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KB2919355", "KB2919355\KB2919355.csproj", "{8C9D96EA-AFA8-4FE9-BEB2-338249D2410E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KB2919442", "KB2919442\KB2919442.csproj", "{CE5612FD-CDFC-4EBE-B392-94257041C3EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{8C9D96EA-AFA8-4FE9-BEB2-338249D2410E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C9D96EA-AFA8-4FE9-BEB2-338249D2410E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C9D96EA-AFA8-4FE9-BEB2-338249D2410E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE5612FD-CDFC-4EBE-B392-94257041C3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5612FD-CDFC-4EBE-B392-94257041C3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5612FD-CDFC-4EBE-B392-94257041C3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5612FD-CDFC-4EBE-B392-94257041C3EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
