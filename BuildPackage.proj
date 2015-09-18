@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<NuSpec Include="$(MSBuildProjectDirectory)\*.nuspec" />
 	</ItemGroup>
-	<Exec Command="nuget.exe pack &quot;%(NuSpec.FullPath)&quot; -NoPackageAnalysis -Exclude *.csproj;*.csproj.user;/bin/*;/obj/* -OutputDirectory $(SolutionDir)"  />
+	<Exec Command="nuget.exe pack &quot;%(NuSpec.FullPath)&quot; -NoPackageAnalysis -Exclude *.csproj;*.csproj.user;/bin/*;/obj/* -OutputDirectory $(SolutionDir) -Verbosity detailed"  />
 	</Target>
 
 	<Target Name="Clean">
