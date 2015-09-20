@@ -1,5 +1,5 @@
 $packageName = "MsSqlServerManagementStudio2014Express"
-$chocolateyTempDir = Join-Path $env:TEMP "chocolatey"
+$chocolateyTempDir = Join-Path (Get-Item $env:TEMP).FullName "chocolatey"
 $tempDir = Join-Path $chocolateyTempDir $packageName
 $fileFullPath = "$tempDir\SQLManagementStudio.exe"
 $extractPath = "$tempDir\SQLManagementStudio"
