@@ -18,6 +18,9 @@
         <copyright />
         <language>en-US</language>
         <tags>sql mssql server 2014 express ssms management studio</tags>
+        <dependencies>
+            <dependency id="dotnet3.5" />
+        </dependencies>
     </metadata>
   <files>
     <file src="tools\**\*" target="tools" />
