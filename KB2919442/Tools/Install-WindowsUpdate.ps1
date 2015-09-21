@@ -1,6 +1,6 @@
 function Install-WindowsUpdate([string]$kb, [Uri]$url, [string]$file, [string]$cab)
 {
-	if (!(Get-HotFix -id $kb))
+	if (!(Get-HotFix -id $kb -ea SilentlyContinue))
 	{
 		$temp = (Get-Item -LiteralPath $env:TEMP).FullName
 		$out = Join-Path $temp $file
@@ -12,17 +12,17 @@ function Install-WindowsUpdate([string]$kb, [Uri]$url, [string]$file, [string]$c
 		Get-ChocolateyWebFile $kb $out $url
 
 		Write-Host("Installing update $kb...")
-		&wusa $out /extract:$extractPath
+		&wusa $out /extract:$extractPath /quiet
 		&dism.exe /Online /Add-Package /PackagePath:$packagePath /NoRestart /Quiet /LogPath:$logPath | Out-Null
 
-		if (Get-HotFix -id $kb)
+		if (Get-HotFix -id $kb -ea SilentlyContinue)
 		{
 			Write-Host("Install success.")
 			rm -r "$extractPath"
 		}
 		else
 		{
-			Write-Error("Hotfix still not applied after install.")
+			throw "Hotfix still not applied after install."
 		}
 	}
 }
