@@ -23,6 +23,7 @@ if ($sqlcmd -eq $null) {
 Write-Host "SQLCMD: $($sqlcmd.FullName)"
 
 $url = 'http://msdn.microsoft.com/en-US/library/bb399731(v=vs.100).aspx'
-$html = (Invoke-Webrequest $url).ParsedHTML
-$sql = ($html.getElementsByTagName("pre") | select -First 1).innerHTML.Replace('&gt;', '>')
+$html = Invoke-Webrequest $url
+$script  = [regex]"(?s)(?<=<pre>\s*)SET ANSI_NULLS ON.*GO(?=\s*</pre>)"
+$sql = $script.Match($html.RawContent).Value -replace "&gt;", ">"
 & $sqlcmd.FullName -S $instance -Q $sql
