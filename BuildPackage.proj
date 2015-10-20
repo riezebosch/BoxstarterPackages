@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 <Target Name="Build">
+  <PropertyGroup>
+    <nuget Condition="'$(nuget)' == ''">nuget.exe</nuget>
+  </PropertyGroup>
 	<ItemGroup>
 		<NuSpec Include="$(MSBuildProjectDirectory)\*.nuspec" />
 	</ItemGroup>
-	<Exec Command="nuget.exe pack &quot;%(NuSpec.FullPath)&quot; -NoPackageAnalysis -Exclude *.csproj;*.csproj.user;/bin/*;/obj/* -OutputDirectory $(SolutionDir) -Verbosity detailed"  />
+	<Exec Command="$(nuget) pack &quot;%(NuSpec.FullPath)&quot; -NoPackageAnalysis -Exclude *.csproj;*.csproj.user;/bin/*;/obj/* -OutputDirectory $(SolutionDir) -Verbosity detailed"  />
 	</Target>
 
 	<Target Name="Clean">
@@ -12,8 +15,30 @@
 			<NuSpec Include="$(MSBuildProjectDirectory)\*.nuspec" />
 		</ItemGroup>
 
-    <Message Text="$(SolutionDir)\%(NuSpec.FileName).*.nupkg" Importance="high" />
+    <Message Text="Spec: @(NuSpec)" Importance="high" />
     
-    <Delete Files="$(SolutionDir)\%(NuSpec.FileName).*.nupkg" />
+    <!-- Peek inside the nuspec for the package id. -->
+    <XmlPeek Namespaces="&lt;Namespace Prefix='nuspec' Uri='http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd' /&gt;"
+             XmlInputPath="@(NuSpec)"
+             Query="nuspec:package/nuspec:metadata/nuspec:id/text()">
+      <Output TaskParameter="Result" ItemName="spec" />
+    </XmlPeek>
+
+    <!-- Peek with newer namespace if no id was found. -->
+    <XmlPeek Namespaces="&lt;Namespace Prefix='nuspec' Uri='http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd' /&gt;"
+             XmlInputPath="@(NuSpec)"
+             Query="nuspec:package/nuspec:metadata/nuspec:id/text()"
+             Condition="'@(spec)' == ''">
+      <Output TaskParameter="Result" ItemName="spec" />
+    </XmlPeek>
+    
+    <ItemGroup>
+      <NuPkg Include="$(SolutionDir)\%(spec.Filename).*.nupkg" />
+    </ItemGroup>
+
+    <Message Text="Delete: @(NuPkg)" Importance="high" />
+    <Delete Files="@(NuPkg)" />
 	</Target>
+
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
 </Project>
