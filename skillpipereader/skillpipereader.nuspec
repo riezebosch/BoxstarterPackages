@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>skillpipereader</id>
-    <version>1.0.2</version>
+    <version>2.1.143</version>
     <title>Skillpipe Reader</title>
     <authors>arvato</authors>
     <owners>arvato</owners>
