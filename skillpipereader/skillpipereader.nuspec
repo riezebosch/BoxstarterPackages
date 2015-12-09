@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>skillpipereader</id>
+    <version>1.0.2</version>
+    <title>Skillpipe Reader</title>
+    <authors>arvato</authors>
+    <owners>arvato</owners>
+    <licenseUrl>https://skillpipe.com/reader/en-GB/Terms</licenseUrl>
+    <projectUrl>https://skillpipe.courseware-marketplace.com/reader</projectUrl>
+    <iconUrl>https://skillpipe.courseware-marketplace.com/reader/Content/images/skillpipe-logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Skillpipe is an e-reader, which enables students to read digital versions of Microsoft Courseware on their computers.</description>
+    <summary>Installs the skillpipe reader</summary>
+  </metadata>
+  <files>
+    <file src="tools\**\*" target="tools" />
+  </files>
+</package>
