@@ -30,7 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="tools\ChocolateyInstall.ps1" />
+    <None Include="tools\chocolateyUninstall.ps1" />
+    <None Include="tools\chocolateyInstall.ps1" />
     <None Include="skillpipereader.nuspec" />
   </ItemGroup>
   <ItemGroup>
