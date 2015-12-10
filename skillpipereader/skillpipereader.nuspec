@@ -12,6 +12,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Skillpipe is an e-reader, which enables students to read digital versions of Microsoft Courseware on their computers.</description>
     <summary>Installs the skillpipe reader</summary>
+    <dependencies>
+      <dependency id="vcredist2012" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**\*" target="tools" />
