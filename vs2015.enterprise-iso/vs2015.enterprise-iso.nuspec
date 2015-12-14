@@ -2,62 +2,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>vs2015.enterprise-iso</id>
-        <version>14.0.23107.10</version>
+        <version>14.0.24720.00</version>
         <title>Visual Studio Enterprise 2015</title>
         <authors>Microsoft</authors>
         <owners>Matt Wrock</owners>
         <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
-        <projectUrl>http://www.microsoft.com/visualstudio/eng/visual-studio-2013</projectUrl>
+        <projectUrl>http://www.microsoft.com/visualstudio/eng/visual-studio-2015</projectUrl>
         <iconUrl>https://github.com/mwrock/Chocolatey-Packages/raw/master/VisualStudio2012Ultimate/vs.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
-          This silently installs Visual Studio 2015 Enterprise from the ISO.
-          ==================OPTIONAL FEATURES==================
-          All Optional Features such as Blend, Sql Dev tools, Web dev tools, etc. are not installed by default, but you can provide install arguments to add them. Here is an example that includes the Web Tools and the Windows 8 Store App SDK:
-
-          cinst vs2015.enterprise-iso -InstallArguments "/Features:'WebToolsV1' /ProductKey:AB1CD-EF2GH-IJ3KL-MN4OP-QR5ST"
-
-
-          You simply need to send a white space delimited list of the features to install via the InstallArguments parameter. Here are the available features:
-          TypeScriptV1
-          WebToolsV1
-          GitForWindowsV1
-          NativeLanguageSupport_VCV1
-          NativeLanguageSupport_MFCV1
-          NativeLanguageSupport_XPV1
-          Win81SDK_HiddenV1
-          FSharpV1
-          PythonToolsForVisualStudioV1
-          ClickOnceV1
-          LightSwitchV1
-          OfficeDeveloperToolsV1
-          SQLV1
-          PowerShellToolsV1
-          SilverLight_Developer_KitV1
-          XamarinVSCoreV1
-          AndroidNDKV1
-          AndroidSDKV1
-          AndroidSDK_API1921V1
-          AndroidSDK_API22V1
-          AntV1
-          MDDCPlusPlus_iOSV1
-          MDDCPlusPlus_AndroidV1
-          JavaJDKV1
-          Node.jsV1
-          VSEmu_AndroidV1
-          WebSocket4NetV1
-          ToolsForWin81_WP80_WP81V1
-          WindowsPhone81EmulatorsV1
-          GitHubVSV1
-          VS_SDK_GroupV1
-          VS_SDK_Breadcrumb_GroupV1
-
-
+          This silently installs Visual Studio 2015 Enterprise from the ISO. You can select features with -InstallArguments "/InstallSelectableItems SQL;WebTools". See for more details: http://timsneath.com/visual-studio-2015-installation-options/
           You can cache the download by copying it to the %TEMP%\chocolatey\vs2015.enterprise-iso directory.
-
-          This package is based on the VisualStudio2013Ultimate package by mwrock</description>
+        </description>
         <summary>Visual Studio Enterprise 2015 is the state-of-the-art development solution that empowers teams of all sizes to design and create compelling apps to delight users.</summary>
-        <releaseNotes>VS2015 ISO</releaseNotes>
+        <releaseNotes>VS2015 Update 1; Removed custom feature selection.</releaseNotes>
         <tags>Microsoft Visual Studio 2015 Enterprise IDE ALM VS2015</tags>
         <dependencies>
           <dependency id="Windows8.1-KB2919355" />
