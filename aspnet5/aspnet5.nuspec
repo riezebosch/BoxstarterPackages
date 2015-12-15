@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>aspnet5</id>
+        <version>1.0.11123.0</version>
+        <title>Microsoft ASP.NET 5 RC1 Update 1</title>
+        <authors>Microsoft</authors>
+        <owners>Manuel Riezebosch</owners>
+        <licenseUrl>https://www.asp.net/terms-of-use</licenseUrl>
+        <projectUrl>https://www.asp.net/vnext</projectUrl>
+        <iconUrl>https://github.com/riezebosch/BoxstarterPackages/raw/master/aspnet5/asplogo-square.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>
+          ASP.NET 5 is a lean and composable framework for building web and cloud applications. ASP.NET 5 is fully open source and available on GitHub. ASP.NET 5 is available as a Release Candidate on Windows, Mac, and Linux.
+        </description>
+        <summary>ASP.NET 5 RC1 Update 1</summary>
+        <releaseNotes>RC1</releaseNotes>
+        <tags>Microsoft Visual Studio 2015 ASP ASPNET MVC</tags>
+    </metadata>
+  <files>
+    <file src="tools\**\*" target="tools" />
+  </files>
+</package>

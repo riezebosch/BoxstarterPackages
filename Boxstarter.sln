@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KB2919442", "KB2919442\KB29
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skillpipereader", "skillpipereader\skillpipereader.csproj", "{936C4A0E-14EF-456C-8153-7D0409D0663C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet5", "aspnet5\aspnet5.csproj", "{4CBEB4AD-95E2-405B-A7E3-80360B972031}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{936C4A0E-14EF-456C-8153-7D0409D0663C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{936C4A0E-14EF-456C-8153-7D0409D0663C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{936C4A0E-14EF-456C-8153-7D0409D0663C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CBEB4AD-95E2-405B-A7E3-80360B972031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CBEB4AD-95E2-405B-A7E3-80360B972031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CBEB4AD-95E2-405B-A7E3-80360B972031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CBEB4AD-95E2-405B-A7E3-80360B972031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
