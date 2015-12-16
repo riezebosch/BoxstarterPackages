@@ -47,7 +47,10 @@
       Specifying the optional features above modifies the configuration file used during installation (AdminDeployment.xml). If that is not enough you can provide this file on your own.
       Example:
 
-      choco install VisualStudio2015Enterprise -ia "--AdminFile c:\path to your\AdminDeployment.xml"
+      choco install VisualStudio2015Enterprise -ia "/AdminFile c:\path to your\AdminDeployment.xml"
+      
+      #### Offline installation
+      Specify the layout location as package parameter to be download and update the layout and install from there with the following command: choco install VisualStudio2015Enterprise -params "/layout C:\VS2015".
     </description>
     <tags>Microsoft Visual Studio 2015 Enterprise IDE</tags>
   </metadata>
