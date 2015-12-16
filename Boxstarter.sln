@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skillpipereader", "skillpip
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet5", "aspnet5\aspnet5.csproj", "{4CBEB4AD-95E2-405B-A7E3-80360B972031}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudio2015Enterprise", "VisualStudio2015Enterprise\VisualStudio2015Enterprise.csproj", "{5B510A1E-2FF4-467D-9818-D56489CB0B24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{4CBEB4AD-95E2-405B-A7E3-80360B972031}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CBEB4AD-95E2-405B-A7E3-80360B972031}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CBEB4AD-95E2-405B-A7E3-80360B972031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B510A1E-2FF4-467D-9818-D56489CB0B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B510A1E-2FF4-467D-9818-D56489CB0B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B510A1E-2FF4-467D-9818-D56489CB0B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B510A1E-2FF4-467D-9818-D56489CB0B24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

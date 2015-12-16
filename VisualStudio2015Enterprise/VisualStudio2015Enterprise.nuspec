@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VisualStudio2015Enterprise</id>
+    <title>Visual Studio 2015 Enterprise</title>
+    <version>14.0.24720.0</version>
+    <authors>Microsoft</authors>
+    <owners>Jivko Kolev</owners>
+    <projectUrl>https://www.visualstudio.com/vs-2015-product-editions</projectUrl>
+    <iconUrl>https://github.com/jivkok/Chocolatey-Packages/raw/master/VisualStudioCommon/VS2015.png</iconUrl>
+    <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Enterprise grade solution with advanced capabilities for teams working on projects of any size or complexity, including advanced testing and DevOps</summary>
+    <description>
+      ### Overview
+      Enterprise grade solution with advanced capabilities for teams working on projects of any size or complexity, including advanced testing and DevOps.
+
+      - End-to-end solution for your development teams, including the most feature-rich Visual Studio IDE for working on any type of project.
+      - Build quality applications at scale with advanced features such as Load Testing, automated and manual testing and new IntelliTest capabilities.
+      - Manage complexity and resolve issues quickly with features such as Code Map and IntelliTrace.
+      - Enhanced MSDN subscription benefits including comprehensive access to software for dev/test, Team Foundation Server, Visual Studio Online Advanced, $150/month in Azure credits, training and support.
+
+      ### Customizations
+      You can customize the installation either by adding optional available features or by specifying own installation configuration file.
+
+      #### Adding optional features
+      Optional features (Sql tools, phone tools, etc.) are available but not installed by default.
+      You can provide optional parameters to include them during the install.
+      Here is example that includes the Sql Tools and Windows Phone Emulators:
+
+      choco install VisualStudio2015Enterprise -ia "/InstallSelectableItems SQL;WindowsPhone81Emulators"
+
+      ##### Available features:
+      - LightSwitch
+      - MDDCPlusPlus
+      - MDDJS
+      - OfficeDeveloperTools
+      - SilverLight_Developer_Kit
+      - SQL
+      - ToolsForWin81_WP80_WP81
+      - VC_MFC_Libraries
+      - WindowsPhone81Emulators
+
+      See for more details: http://timsneath.com/visual-studio-2015-installation-options/ or dig your way through the feed: http://download.microsoft.com/download/4/E/3/4E353239-F3A6-4C1F-BEF2-7DB062D0A5C4/20151211.2/enu/feed.xml.
+
+      #### Using own configuration file
+      Specifying the optional features above modifies the configuration file used during installation (AdminDeployment.xml). If that is not enough you can provide this file on your own.
+      Example:
+
+      choco install VisualStudio2015Enterprise -ia "--AdminFile c:\path to your\AdminDeployment.xml"
+    </description>
+    <tags>Microsoft Visual Studio 2015 Enterprise IDE</tags>
+  </metadata>
+  <files>
+    <file src="Tools\*" target="Tools\" />
+  </files>
+</package>
