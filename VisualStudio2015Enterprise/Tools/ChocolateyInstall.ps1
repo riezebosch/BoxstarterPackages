@@ -17,12 +17,15 @@ if ($env:chocolateyPackageParameters -match "(?<=/layout )\S+") {
 		# Join relative path to package temp folder
 		$layout = Join-Path $tempDir $layout
 	}
-	# Create layout on specified location
-	Write-Host "Creating layout at: $layout"
-	Start-Process $fileFullPath "/layout $layout $params" -Wait
-	
+
+	$installer = Join-Path $layout "vs_enterprise.exe"
+	if (!(Test-Path $installer)) {
+		Write-Host "Creating layout at: $layout"
+		Start-Process $fileFullPath "/layout $layout $params" -Wait
+	} 
+
 	# Redirect installation to layout folder
-	$fileFullPath = Join-Path $layout "vs_enterprise.exe"
+	$fileFullPath = $installer
 }
 
 Install-ChocolateyInstallPackage $packageName "exe" $params $fileFullPath -validExitCodes @(0, 3010)
