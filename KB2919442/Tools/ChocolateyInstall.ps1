@@ -1,13 +1,13 @@
 $kb = "KB2919442"
 $packageName = "KB2919442"
 $installerType = "msu"
-$silentArgs = "/quiet /norestart /log:`"$env:TEMP\KB2919442.Install.log`""
+$silentArgs = "/quiet /norestart /log:`"$env:TEMP\$kb.Install.log`""
 $windowsVersion = [Version](Get-CimInstance Win32_OperatingSystem).Version
 $windowsProductType = (Get-CimInstance Win32_OperatingSystem).ProductType
 
 if (!(($windowsVersion -ge [Version]'6.3') -and ($windowsVersion -lt [Version]'6.4')))
 {
-	throw "Only Windows 8.1 and Winodws Server 2012 R2 are supported"
+	throw "Only Windows 8.1 and Windows Server 2012 R2 are supported"
 }
 
 # Windows 8.1 x86

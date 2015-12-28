@@ -31,9 +31,16 @@
              Condition="'@(spec)' == ''">
       <Output TaskParameter="Result" ItemName="spec" />
     </XmlPeek>
+
+    <XmlPeek Namespaces="&lt;Namespace Prefix='nuspec' Uri='http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd' /&gt;"
+            XmlInputPath="@(NuSpec)"
+            Query="nuspec:package/nuspec:metadata/nuspec:version/text()"
+            Condition="'@(spec)' == ''">
+      <Output TaskParameter="Result" ItemName="version" />
+    </XmlPeek>
     
     <ItemGroup>
-      <NuPkg Include="$(SolutionDir)\%(spec.Filename).*.nupkg" />
+      <NuPkg Include="$(SolutionDir)\%(spec.Filename)%(spec.Extension).*.nupkg" />
     </ItemGroup>
 
     <Message Text="Delete: @(NuPkg)" Importance="high" />
