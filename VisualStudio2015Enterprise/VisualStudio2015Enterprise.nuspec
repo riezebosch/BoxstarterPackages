@@ -53,6 +53,9 @@
       Specify the layout location as package parameter to be download and update the layout and install from there with the following command: choco install VisualStudio2015Enterprise -params "/layout C:\VS2015".
     </description>
     <tags>Microsoft Visual Studio 2015 Enterprise IDE</tags>
+    <dependencies>
+      <dependency id="Windows8.1-KB2919355" />
+    </dependencies>
   </metadata>
   <files>
     <file src="Tools\*" target="Tools\" />
