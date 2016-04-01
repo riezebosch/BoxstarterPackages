@@ -3,7 +3,7 @@
   <metadata>
     <id>VisualStudio2015Enterprise</id>
     <title>Visual Studio 2015 Enterprise</title>
-    <version>14.0.24720.0</version>
+    <version>14.0.25123.0</version>
     <authors>Microsoft</authors>
     <owners>Jivko Kolev</owners>
     <projectUrl>https://www.visualstudio.com/vs-2015-product-editions</projectUrl>
@@ -11,6 +11,7 @@
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Enterprise grade solution with advanced capabilities for teams working on projects of any size or complexity, including advanced testing and DevOps</summary>
+    <releaseNotes>VS2015 Update 2</releaseNotes>
     <description>
       ### Overview
       Enterprise grade solution with advanced capabilities for teams working on projects of any size or complexity, including advanced testing and DevOps.

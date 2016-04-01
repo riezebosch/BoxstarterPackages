@@ -1,6 +1,6 @@
 $packageName = "VisualStudio2015Enterprise"
 $params = "/passive /norestart /log $env:temp\vs.log"
-$url = "http://download.microsoft.com/download/C/7/8/C789377D-7D49-4331-8728-6CED518956A0/vs_enterprise_ENU.exe"
+$url = "http://download.microsoft.com/download/4/c/3/4c3d2dc6-1cb5-4fbf-81b1-cb2c3f630415/vs_enterprise.exe"
 
 $chocolateyTempDir = Join-Path $env:TEMP "chocolatey"
 $tempDir = Join-Path $chocolateyTempDir $packageName
