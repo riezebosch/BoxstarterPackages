@@ -2,12 +2,12 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 <Target Name="Build">
   <PropertyGroup>
-    <nuget Condition="'$(nuget)' == ''">nuget.exe</nuget>
+    <!--<nuget Condition="'$(nuget)' == ''">nuget.exe</nuget>-->
   </PropertyGroup>
 	<ItemGroup>
 		<NuSpec Include="$(MSBuildProjectDirectory)\*.nuspec" />
 	</ItemGroup>
-	<Exec Command="$(nuget) pack &quot;%(NuSpec.FullPath)&quot; -NoPackageAnalysis -Exclude *.csproj;*.csproj.user;/bin/*;/obj/* -OutputDirectory $(SolutionDir) -Verbosity detailed"  />
+	<Exec Command="choco pack &quot;%(NuSpec.FullPath)&quot;"  />
 	</Target>
 
 	<Target Name="Clean">
