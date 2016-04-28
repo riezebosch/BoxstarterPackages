@@ -6,7 +6,7 @@ $packageName = 'xmlspy'
 $softwareName = 'xmlspy*'
 $installerType = 'MSI' 
 
-$silentArgs = '/qn+ /x'
+$silentArgs = '/qn /x'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
 if ($installerType -ne 'MSI') {
   $validExitCodes = @(0)

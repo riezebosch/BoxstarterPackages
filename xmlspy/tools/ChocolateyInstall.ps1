@@ -14,7 +14,7 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  silentArgs    = "/qn+ /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`""
+  silentArgs    = "/qn /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`""
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'xmlspy*'
