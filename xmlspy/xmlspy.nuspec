@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>xmlspy</id>
+    <title>Altova XMLSpy 2016 (Install)</title>
+    <version>18.2.0.0</version>
+    <authors>Altova</authors>
+    <owners>riezebosch</owners>
+    <description>
+      Altova XMLSpy® 2016 is the industry's best-selling XML editor for modeling, editing, transforming, and debugging XML-related technologies. It offers the world’s leading graphical schema designer, a code generator, file converters, debuggers, profilers, full database integration, support for XSLT, XPath, XQuery, WSDL, SOAP, XBRL, JSON, and Office Open XML (OOXML) , plus Visual Studio and Eclipse integration, and more.
+    </description>
+    <projectUrl>http://www.altova.com/xmlspy.html</projectUrl>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
+    <!--<projectSourceUrl></projectSourceUrl>
+    <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>
+    <bugTrackerUrl></bugTrackerUrl>-->
+    <tags>xmlspy altova 2016 admin</tags>
+    <!--<copyright></copyright>-->
+    <licenseUrl>http://www.altova.com/eula.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://cdn.rawgit.com/https://github.com/riezebosch/BoxstarterPackages/master/icons/xmlspy_L.gif</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="__VERSION__" />
+      <dependency id="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
