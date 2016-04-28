@@ -3,7 +3,7 @@
 $ErrorActionPreference = 'Stop';
 
 $packageName = 'xmlspy'
-$softwareName = 'xmlspy*'
+$softwareName = 'altova authentic 2016*'
 $installerType = 'MSI' 
 
 $silentArgs = '/qn /x'
