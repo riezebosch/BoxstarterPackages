@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'xmlspy'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://cdn.sw.altova.com/v2016r2d/en/AuthenticEnt2016rel2.exe'
-$url64      = 'http://cdn.sw.altova.com/v2016r2d/en/AuthenticEnt2016rel2_x64.exe?file.exe'
+$url        = 'http://cdn.sw.altova.com/v2016r2d/en/XMLSpyEnt2016rel2.exe'
+$url64      = 'http://cdn.sw.altova.com/v2016r2d/en/XMLSpyEnt2016rel2_x64.exe'
 
 $packageArgs = @{
   packageName   = $packageName

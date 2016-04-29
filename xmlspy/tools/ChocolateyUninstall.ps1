@@ -3,8 +3,8 @@
 $ErrorActionPreference = 'Stop';
 
 $packageName = 'xmlspy'
-$softwareName = 'altova authentic 2016*'
-$installerType = 'MSI' 
+$softwareName = 'Altova XMLSpy 2016*'
+$installerType = 'exe' 
 
 $silentArgs = '/qn /x'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
