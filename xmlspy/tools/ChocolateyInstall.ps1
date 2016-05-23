@@ -24,11 +24,20 @@ $packageArgs = @{
   checksumType64= 'md5'
 }
 
-Install-ChocolateyPackage @packageArgs
 
+# HACK: The XMLSpy installer fails when this key is already present.
+$key = "MenuExt"
+$path = "HKCU:\SOFTWARE\Microsoft\Internet Explorer\$key"
+Rename-Item -Path $path  -NewName "$key BAK" -ea SilentlyContinue
 
-
-
+Try {
+	Install-ChocolateyPackage @packageArgs
+}
+Finally {
+	# Restore the hack.
+	Remove-Item -Path $path -Recurse -ea SilentlyContinue
+	Rename-Item -Path "$path BAK"  -NewName $key -ea SilentlyContinue
+}
 
 
 
