@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
     <title>Altova XMLSpy 2016 (Install)</title>
-    <version>18.2.0.0</version>
+    <version>2016.02.00</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
