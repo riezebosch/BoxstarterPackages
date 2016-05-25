@@ -4,8 +4,8 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
-    <title>Altova XMLSpy 2016 (Install)</title>
-    <version>2016.02.00</version>
+    <title>Altova XMLSpy 2016 Enterprise (Install)</title>
+    <version>2016.2.0</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
@@ -17,11 +17,11 @@
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>xmlspy altova 2016 admin</tags>
+    <tags>xmlspy altova 2016 admin trial</tags>
     <!--<copyright></copyright>-->
     <licenseUrl>http://www.altova.com/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://cdn.rawgit.com/https://github.com/riezebosch/BoxstarterPackages/master/icons/xmlspy_L.gif</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/riezebosch/BoxstarterPackages/tree/master/xmlspy/icons/xmlspy_ent.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
