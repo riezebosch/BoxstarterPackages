@@ -21,7 +21,7 @@
     <!--<copyright></copyright>-->
     <licenseUrl>http://www.altova.com/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/riezebosch/BoxstarterPackages/tree/master/xmlspy/icons/xmlspy_ent.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/xmlspy/icons/xmlspy_ent.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
