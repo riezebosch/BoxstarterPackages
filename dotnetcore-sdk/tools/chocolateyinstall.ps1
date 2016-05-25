@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'dotnetcore-sdk'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://go.microsoft.com/fwlink/?LinkID=798387'
-$url64      = 'https://go.microsoft.com/fwlink/?LinkID=798386'
+$url        = 'https://go.microsoft.com/fwlink/?LinkID=798399'
+$url64      = 'https://go.microsoft.com/fwlink/?LinkID=798398'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -14,7 +14,7 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  silentArgs    = "/install /passive /norestart /log `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`""
+  silentArgs    = "/install /passive /norestart /log `"$env:TEMP\$($packageName)\$($packageName).MsiInstall.log`""
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'dotnet-core*'
