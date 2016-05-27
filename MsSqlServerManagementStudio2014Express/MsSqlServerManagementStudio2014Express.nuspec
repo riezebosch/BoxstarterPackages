@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
 		<id>MsSqlServerManagementStudio2014Express</id>
 		<version>12.0.2000.20160527</version>
@@ -7,6 +7,7 @@
         <authors>Microsoft</authors>
         <owners>Microsoft</owners>
         <projectUrl>http://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx#fbid=UP-ogD7ptCn</projectUrl>
+        <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
         <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
@@ -14,8 +15,7 @@
 			My packages are available on https://github.com/riezebosch/BoxstarterPackages.git. You can fork this repository and suggest improvements using pull requests.
 		</description>
         <summary>Installs SQL Server Management Studio 2014 Express</summary>
-        <releaseNotes>Fix for expanding temp environment variable and fix for dependancy to dotnet3.5 framework. This version still installs the 12.0.2000.8 version of SSMS!</releaseNotes>
-        <copyright />
+        <releaseNotes>Required dependency on .NET 3.5 framework</releaseNotes>
         <language>en-US</language>
         <tags>sql mssql server 2014 express ssms management studio</tags>
         <dependencies>
