@@ -5,7 +5,7 @@
 		<version>12.0.2000.20160527</version>
         <title>SQL Server 2014 Express Management Studio</title>
         <authors>Microsoft</authors>
-        <owners>Microsoft</owners>
+        <owners>riezebosch</owners>
         <projectUrl>http://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx#fbid=UP-ogD7ptCn</projectUrl>
         <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
         <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
