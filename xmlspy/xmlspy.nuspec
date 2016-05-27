@@ -10,6 +10,8 @@
     <owners>riezebosch</owners>
     <description>
       Altova XMLSpy® 2016 is the industry's best-selling XML editor for modeling, editing, transforming, and debugging XML-related technologies. It offers the world’s leading graphical schema designer, a code generator, file converters, debuggers, profilers, full database integration, support for XSLT, XPath, XQuery, WSDL, SOAP, XBRL, JSON, and Office Open XML (OOXML) , plus Visual Studio and Eclipse integration, and more.
+      
+      **Note:** The software *must* be activated before use. You can request a free 30 day trial key from the activation wizard.
     </description>
     <projectUrl>http://www.altova.com/xmlspy.html</projectUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
@@ -26,7 +28,7 @@
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
     </dependencies>-->
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://www.altova.com/releasenotes/Default.aspx</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>
