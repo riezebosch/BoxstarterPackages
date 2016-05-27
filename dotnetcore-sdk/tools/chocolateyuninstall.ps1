@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'dotnetcore-sdk'
-$silentArgs = "/uninstall /passive /norestart"
+$silentArgs = "/uninstall /quiet /norestart"
 $url        = 'https://go.microsoft.com/fwlink/?LinkID=798399'
 $url64bit   = 'https://go.microsoft.com/fwlink/?LinkID=798398'
 $fileType   = "exe"

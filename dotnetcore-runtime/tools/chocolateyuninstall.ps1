@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'dotnetcore-runtime'
-$silentArgs = "/uninstall /passive /norestart"
+$silentArgs = "/uninstall /quiet /norestart"
 $url        = 'https://go.microsoft.com/fwlink/?LinkID=798387'
 $url64bit   = 'https://go.microsoft.com/fwlink/?LinkID=798386'
 $fileType   = "exe"

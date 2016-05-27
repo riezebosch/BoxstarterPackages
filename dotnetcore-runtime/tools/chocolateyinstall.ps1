@@ -14,7 +14,7 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  silentArgs    = "/install /passive /norestart /log `"$env:TEMP\$($packageName)\$($packageName).MsiInstall.log`""
+  silentArgs    = "/install /quiet /norestart /log `"$env:TEMP\$($packageName)\$($packageName).MsiInstall.log`""
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'dotnet-core*'
