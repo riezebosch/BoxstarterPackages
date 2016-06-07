@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>mssqlservermanagementstudio2016express</id>
+    <title>MsSqlServerManagementStudio2016Express (Install)</title>
+    <version>13.0.15000.23</version>
+    <authors>Microsoft</authors>
+    <owners>riezebosch</owners>
+     <summary>Installs SQL Server Management Studio 2016 Express</summary>
+    <description>
+    			This package only installs SQL Server Express Management Studio UNATTENDED! The SQL Server Express installation itself is provided in a seperate package!
+    </description>
+    <projectUrl>http://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx#fbid=UP-ogD7ptCn</projectUrl>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
+
+    <!--<projectSourceUrl></projectSourceUrl>
+    <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>
+    <bugTrackerUrl></bugTrackerUrl>-->
+    <tags>sql mssql server 2016 express ssms management studio admin</tags>
+    <!--<copyright></copyright>-->
+    <!--<licenseUrl></licenseUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
+    <dependencies>
+      <dependency id="Windows8.1-KB2919355" />
+    </dependencies>
+    <releaseNotes>https://msdn.microsoft.com/en-us/library/mt238290.aspx</releaseNotes>
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
