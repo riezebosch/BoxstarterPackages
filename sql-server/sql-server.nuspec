@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>sql-server</id>
+    <title>Microsoft SQL Server (Install)</title>
+    <version>13.0.1601.5</version>
+    <authors>Microsoft</authors>
+    <owners>riezebosch</owners>
+    <summary>Installs SQL Server 2016 Evaluation.</summary>
+    <description><![CDATA[
+SQL Server 2016  is here! It is the biggest leap forward in Microsoft’s data platform history with faster transactions and queries, deeper insights on any device, advanced analytics, new security technology, and new hybrid cloud scenarios. 
+
+SQL Server 2016 delivers breakthrough mission-critical capabilities with in-memory performance and operational analytics built-in. Comprehensive security features like new Always Encrypted technology helps protect your data at rest and in motion, and a world class high availability and disaster recovery solution adds new enhancements to AlwaysOn technology.
+
+Organizations will gain deeper insights into all of their data with new capabilities that go beyond business intelligence to perform advanced analytics directly within their database and present rich visualizations for business insights on any device.
+
+You can also gain the benefits of hyper-scale cloud with new hybrid scenarios enabled by new Stretch Database technology that lets you dynamically stretch your warm and cold transactional data to Microsoft Azure in a secured way so your data is always at hand for queries, no matter the size. In addition, SQL Server 2016 delivers a complete database platform for hybrid cloud, enabling you to easily build, deploy and manage solutions that span on-premises and cloud.
+
+**Benefits**
+
+* Enhanced in-memory performance provide up to 30x faster transactions, more than 100x faster queries than disk based relational databases and real-time operational analytics
+* New Always Encrypted technology helps protect your data at rest and in motion, on-premises and in the cloud, with master keys sitting with the application, without application changes
+* Built-in advanced analytics– provide the scalability and performance benefits of building and running your advanced analytics algorithms directly in the core SQL Server transactional database
+* Business insights through rich visualizations on mobile devices with native apps for Windows, iOS and Android
+* Simplify management of relational and non-relational data with ability to query both through standard T-SQL using PolyBase technology
+* Stretch Database technology keeps more of your customer’s historical data at your fingertips by transparently stretching your warm and cold OLTP data to Microsoft Azure in a secure manner without application changes
+* Faster hybrid backups, high availability and disaster recovery scenarios to backup and restore your on-premises databases to Microsoft Azure and place your SQL Server AlwaysOn secondaries in Azure
+
+**Languages** 
+Chinese (Simplified), Chinese (Traditional), English, French, German, Italian, Japanese, Korean, Portuguese (Brazil), Russian, Spanish
+
+**Installation Instructions**
+For custom installation parameters see [this](https://msdn.microsoft.com/en-us/library/ms144259.aspx#Anchor_2) MSDN page. Default installation uses the sample from that page:
+> To install a new, stand-alone instance with the SQL Server Database Engine, Replication, and Full-Text Search components and enable instant file initialization for SQL Server Database Engine.
+> Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS
+
+With the exception that:
+* SQLSYSADMINACCOUNTS = current user
+* SQLSVCACCOUNT = NT AUTHORITY\Network Service 
+
+**Uninstallation**
+The SetupARP is invoked by the uninstall script but unfortunately this is NOT UNATTENDED.
+    ]]></description>
+    <projectUrl>https://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/</projectUrl>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
+    <!--<projectSourceUrl></projectSourceUrl>
+    <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>
+    <bugTrackerUrl></bugTrackerUrl>-->
+    <tags>sql server admin 2016 express evaluation</tags>
+    <copyright>2016</copyright>
+    <licenseUrl>http://download.microsoft.com/download/F/D/5/FD5E5C28-6973-4273-8737-D69AA3BEA243/SQL_Server_2016_Licensing_Datasheet_EN_US.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
+    <dependencies>
+      <dependency id="vcredist2013" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
