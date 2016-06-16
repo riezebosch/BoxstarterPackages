@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>Windows8.1-KB2919355</id>
+        <id>Windows81-KB2919355</id>
         <version>1.0.0</version>
         <title></title>
         <authors>Microsoft</authors>
@@ -17,7 +17,7 @@
         <releaseNotes></releaseNotes>
         <tags>Microsoft Visual Studio 2015 Windows Update KB2919355</tags>
         <dependencies>
-          <dependency id="Windows8.1-KB2919442" />
+          <dependency id="Windows81-KB2919442" />
         </dependencies>
     </metadata>
   <files>

@@ -55,7 +55,7 @@
     </description>
     <tags>Microsoft Visual Studio 2015 Enterprise IDE</tags>
     <dependencies>
-      <dependency id="Windows8.1-KB2919355" />
+      <dependency id="Windows81-KB2919355" />
     </dependencies>
   </metadata>
   <files>
