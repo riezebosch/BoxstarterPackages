@@ -31,17 +31,20 @@ You can also gain the benefits of hyper-scale cloud with new hybrid scenarios en
 **Languages** 
 Chinese (Simplified), Chinese (Traditional), English, French, German, Italian, Japanese, Korean, Portuguese (Brazil), Russian, Spanish
 
-**Installation Instructions**
-For custom installation parameters see [this](https://msdn.microsoft.com/en-us/library/ms144259.aspx#Anchor_2) MSDN page. Default installation uses the sample from that page:
-> To install a new, stand-alone instance with the SQL Server Database Engine, Replication, and Full-Text Search components and enable instant file initialization for SQL Server Database Engine.
-> Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS
+## Installation Instructions
+For custom installation parameters see [this](https://msdn.microsoft.com/en-us/library/ms144259.aspx#Anchor_2) MSDN page. The package default installation uses the sample from the MSDN page:
+```
+To install a new, stand-alone instance with the SQL Server Database Engine, Replication, and Full-Text Search components and enable instant file initialization for SQL Server Database Engine.
+Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSVCINSTANTFILEINIT="True" /IACCEPTSQLSERVERLICENSETERMS
+```
 
 With the exception that:
+
 * SQLSYSADMINACCOUNTS = current user
 * SQLSVCACCOUNT = NT AUTHORITY\Network Service 
 
-**Uninstallation**
-The SetupARP is invoked by the uninstall script but unfortunately this is NOT UNATTENDED.
+## Uninstallation
+The SetupARP is invoked by the uninstall script. Unfortunately this is NOT UNATTENDED (yet).
     ]]></description>
     <projectUrl>https://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/</projectUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
