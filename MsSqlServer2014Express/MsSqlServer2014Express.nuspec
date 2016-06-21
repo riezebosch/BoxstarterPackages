@@ -2,21 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MsSqlServer2014Express</id>
-    <version>12.0.4100.1</version>
+    <version>12.0.4100.20160621</version>
     <title>SQL Server 2014 Express with SP1</title>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
     <projectUrl>http://msdn.microsoft.com/nl-nl/evalcenter/dn434042.aspx</projectUrl>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      This package installs SQL Server 2014 Express with SP1 UNATTENDED! You can use install arguments to add additional arguments or override arguments to supply specific arguments.
-      For some reason I keep having troubles when installing this package directly but it is working with BoxStarter just fine (see this tweet for more info: https://twitter.com/mwrockx/status/402332003439091712).
-
-      My packages are available on https://github.com/riezebosch/BoxstarterPackages.git. You can fork this repository and suggest improvements using pull requests.
+      This package installs SQL Server 2014 Express with SP1. You can use install arguments to add additional arguments or override arguments to supply specific arguments.
     </description>
     <summary>Installs SQL Server 2014 Express with SP1</summary>
-    <releaseNotes>Updated to SP1.</releaseNotes>
+    <releaseNotes>Added checksum for downloads. Fixed uninstall.</releaseNotes>
     <copyright />
     <language>en-US</language>
     <tags>mssql sql server 2014 express sp1</tags>

@@ -5,12 +5,14 @@ $fileFullPath = "$tempDir\SQLEXPR.exe"
 $extractPath = "$tempDir\SQLEXPR"
 $setupPath = "$extractPath\setup.exe"
 $silentArgs = "/IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQL /Q /ACTION=uninstall"
-$url = "http://care.dlservice.microsoft.com/dl/download/E/A/E/EAE6F7FC-767A-4038-A954-49B8B05D04EB/Express%2032BIT/SQLEXPR_x86_ENU.exe"
-$url64 = "http://care.dlservice.microsoft.com/dl/download/E/A/E/EAE6F7FC-767A-4038-A954-49B8B05D04EB/Express%2064BIT/SQLEXPR_x64_ENU.exe"
+$url = "https://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLEXPR_x86_ENU.exe"
+$url64 = "https://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x64/SQLEXPR_x64_ENU.exe"
+$checksum = '33C0112905B62B6BAD883112C2F49B50AA12C679'
+$checksum64 = '0C90C147A1C2A550165C9301AE7A6C604E318E51'
 
 # Using the same download location as Install-ChocolateyPackage but need to create the directory first
 if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
-Get-ChocolateyWebFile $packageName $fileFullPath $url $url64
+Get-ChocolateyWebFile $packageName $fileFullPath $url $url64 -Checksum $checksum -Checksum64 $checksum64 -ChecksumType "sha1"
 
 Write-Host "Extracting..."
 Start-Process "$fileFullPath" "/Q /x:`"$extractPath`"" -Wait
