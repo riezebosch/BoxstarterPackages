@@ -23,11 +23,11 @@
     <licenseUrl>http://download.microsoft.com/download/F/D/5/FD5E5C28-6973-4273-8737-D69AA3BEA243/SQL_Server_2016_Licensing_Datasheet_EN_US.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="__VERSION__" />
-      <dependency id="" />
-    </dependencies>-->
-    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2013" />
+      <dependency id="Windows81-KB2919355" />
+    </dependencies>
+    <releaseNotes>https://msdn.microsoft.com/en-us/library/dn876712.aspx?f=255&amp;MSPPError=-2147217396</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>
