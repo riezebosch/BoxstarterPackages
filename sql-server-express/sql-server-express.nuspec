@@ -4,7 +4,7 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>sql-server-express</id>
-    <title>sql-server-express (Install)</title>
+    <title>Microsoft SQL Server 2016 Express (Install)</title>
     <version>13.0.1601.5</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
