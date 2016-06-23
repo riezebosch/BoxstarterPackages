@@ -20,12 +20,13 @@ if ($env:chocolateyPackageParameters -match "(?<=/layout )\S+") {
 
 	$installer = Join-Path $layout "vs_enterprise.exe"
 	if (!(Test-Path $installer)) {
-		Write-Host "Creating layout at: $layout"
-		Start-Process $fileFullPath "/layout $layout $params" -Wait
-	} 
-
-	# Redirect installation to layout folder
-	$fileFullPath = $installer
+		Write-Host "Layout directory specified but not found at $layout, installing from bootstrapper installer."
+		Write-Host "To create the layout use command: Start-Process $fileFullPath `"/layout $layout $params`" -Wait"
+	} else {
+		# Redirect installation to layout folder
+		Write-Host "Installing from layout location at: $layout."
+		$fileFullPath = $installer
+	}
 }
 
 Install-ChocolateyInstallPackage $packageName "exe" $params $fileFullPath -validExitCodes @(0, 3010)
