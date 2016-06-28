@@ -1,4 +1,4 @@
-$packageName = "vs2015-enterprise-iso"
+$packageName = "VisualStudio2015Enterprise"
 $app = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -eq "Microsoft Visual Studio Enterprise 2015" }
 if($app -ne $null){
     $version=$app.Version

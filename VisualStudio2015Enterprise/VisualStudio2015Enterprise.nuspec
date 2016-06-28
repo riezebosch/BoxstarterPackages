@@ -3,7 +3,7 @@
   <metadata>
     <id>VisualStudio2015Enterprise</id>
     <title>Visual Studio 2015 Enterprise</title>
-    <version>14.0.25123.0</version>
+    <version>14.0.6005.20108</version>
     <authors>Microsoft</authors>
     <owners>Jivko Kolev</owners>
     <projectUrl>https://www.visualstudio.com/vs-2015-product-editions</projectUrl>
@@ -11,7 +11,7 @@
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Enterprise grade solution with advanced capabilities for teams working on projects of any size or complexity, including advanced testing and DevOps</summary>
-    <releaseNotes>VS2015 Update 2</releaseNotes>
+    <releaseNotes>VS2015 Update 3</releaseNotes>
     <description>
       ### Overview
       Enterprise grade solution with advanced capabilities for teams working on projects of any size or complexity, including advanced testing and DevOps.
@@ -53,7 +53,7 @@
       #### Offline installation
       Specify the layout location as package parameter to be download and update the layout and install from there with the following command: choco install VisualStudio2015Enterprise -params "/layout C:\VS2015".
     </description>
-    <tags>Microsoft Visual Studio 2015 Enterprise IDE</tags>
+    <tags>Microsoft Visual Studio 2015 Enterprise IDE Update3</tags>
     <dependencies>
       <dependency id="Windows81-KB2919355" />
     </dependencies>
