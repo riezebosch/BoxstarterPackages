@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>dotnetcore-vs</id>
+    <title>.NET Core for Visual Studio (Install)</title>
+    <version>1.0.0-Preview2</version>
+    <authors>Microsoft</authors>
+    <owners>riezebosch</owners>
+    <summary></summary>
+    <description>.NET Core is a general purpose development platform maintained by Microsoft and the .NET community on [GitHub](https://github.com/dotnet/core). It is cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.
+    </description>
+    <projectUrl>https://docs.microsoft.com/nl-nl/dotnet/articles/core/index</projectUrl>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
+    <projectSourceUrl>https://github.com/dotnet/core/</projectSourceUrl>
+    <docsUrl>http://docs.microsoft.com/dotnet</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>
+    <bugTrackerUrl></bugTrackerUrl>-->
+    <tags>dotnetcore-vs admin dotnet core .net</tags>
+    <copyright>Microsoft</copyright>
+    <licenseUrl>https://github.com/dotnet/core#licenses</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/dotnetcore-vs/icon/dotnet_logo.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="__VERSION__" />
+      <dependency id="" />
+    </dependencies>-->
+    <releaseNotes>Preview2</releaseNotes>
+    <!--<provides></provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
