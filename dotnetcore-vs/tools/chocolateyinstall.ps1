@@ -10,11 +10,11 @@ $url64      = ''
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'MSI'
+  fileType      = 'EXE'
   url           = $url
   url64bit      = $url64
 
-  silentArgs    = "/quiet /norestart"
+  silentArgs    = "/install /quiet /norestart"
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'dotnetcore-vs*'
