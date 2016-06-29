@@ -14,7 +14,7 @@ $packageArgs = @{
   url           = $url
   url64bit      = $url64
 
-  silentArgs    = "/install /passive /norestart"
+  silentArgs    = "/quiet /norestart"
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'dotnetcore-vs*'
