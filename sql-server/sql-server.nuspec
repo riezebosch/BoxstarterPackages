@@ -58,8 +58,8 @@ The SetupARP is invoked by the uninstall script. Unfortunately this is NOT UNATT
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
     <dependencies>
-      <dependency id="vcredist2013" />
-      <dependency id="Windows81-KB2919355" />
+      <dependency id="vcredist2013" version="12.0.30501.20150616" />
+      <dependency id="KB2919355" version="1.0.20160719" />
     </dependencies>
     <releaseNotes></releaseNotes>
     <!--<provides></provides>-->

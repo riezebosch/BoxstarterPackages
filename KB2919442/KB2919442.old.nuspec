@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>KB2919442</id>
-        <version>1.0.20160719</version>
-        <title></title>
+        <id>Windows81-KB2919442</id>
+        <version>1.0.0</version>
+        <title>[Deprecated] Windows Update KB2919442</title>
         <authors>Microsoft</authors>
         <owners>Manuel Riezebosch</owners>
         <licenseUrl>https://support.microsoft.com/en-us/kb/2919442</licenseUrl>
@@ -17,9 +17,10 @@
         <releaseNotes></releaseNotes>
         <tags>Microsoft Visual Studio 2015 Windows Update 2919442</tags>
         <dependencies>
+          <dependency id="KB2919442" version="1.0.20160719" />
         </dependencies>
     </metadata>
   <files>
-    <file src="tools\**\*" target="tools" />
+    <!--<file src="tools\**\*" target="tools" />-->
   </files>
 </package>

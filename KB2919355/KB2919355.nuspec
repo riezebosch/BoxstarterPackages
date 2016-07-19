@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KB2919355</id>
-        <version>1.0.0</version>
+        <version>1.0.20160719</version>
         <title></title>
         <authors>Microsoft</authors>
         <owners>Manuel Riezebosch</owners>
@@ -17,7 +17,7 @@
         <releaseNotes></releaseNotes>
         <tags>Microsoft Visual Studio 2015 Windows Update KB2919355</tags>
         <dependencies>
-          <dependency id="KB2919442" version="1.0.0" />
+          <dependency id="KB2919442" version="1.0.20160719" />
         </dependencies>
     </metadata>
   <files>
