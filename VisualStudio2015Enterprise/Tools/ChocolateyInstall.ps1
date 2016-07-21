@@ -2,15 +2,14 @@ $packageName = "VisualStudio2015Enterprise"
 $params = "/passive /norestart /log $env:temp\vs.log"
 $url = "http://download.microsoft.com/download/C/7/8/C789377D-7D49-4331-8728-6CED518956A0/vs_enterprise_ENU.exe"
 
-$chocolateyTempDir = Join-Path $env:TEMP "chocolatey"
-$tempDir = Join-Path $chocolateyTempDir $packageName
-$fileFullPath = "$tempDir\vs_enterprise_ENU.exe"
+$tempDir = Join-Path (Get-Item $env:TEMP).FullName "$packageName"
+if ($env:packageVersion -ne $null) {$tempDir = Join-Path $tempDir "$env:packageVersion"; }
 
-Write-Host "Parameters: $env:chocolateyPackageParameters"
-
+# Just download the bootstrapper installer always
 if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
 Get-ChocolateyWebFile $packageName $fileFullPath $url
 
+$fileFullPath = "$tempDir\vs_enterprise_ENU.exe"
 if ($env:chocolateyPackageParameters -match "(?<=/layout )\S+") {
 	$layout = $matches[0]
 	if (!([System.IO.Path]::IsPathRooted($layout))) {

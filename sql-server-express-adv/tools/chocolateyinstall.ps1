@@ -6,8 +6,7 @@ $url64      = 'https://download.microsoft.com/download/E/1/2/E12B3655-D817-49BA-
 $checksum   = '06F829DF0226F705758F9BB36D543622833C1ACE'
 $silentArgs = "/IACCEPTSQLSERVERLICENSETERMS /Q /ACTION=install /INSTANCEID=SQLEXPRESS /INSTANCENAME=SQLEXPRESS /UPDATEENABLED=FALSE"
 
-$chocTempDir =Join-Path (Get-Item $env:TEMP).FullName "chocolatey"
-$tempDir = Join-Path $chocTempDir "$packageName"
+$tempDir = Join-Path (Get-Item $env:TEMP).FullName "$packageName"
 if ($env:packageVersion -ne $null) {$tempDir = Join-Path $tempDir "$env:packageVersion"; }
 
 if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
