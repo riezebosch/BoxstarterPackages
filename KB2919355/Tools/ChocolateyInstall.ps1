@@ -28,7 +28,3 @@ if ($os.ProductType -eq '1') {
 }
 
 Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64" -validExitCodes @(0, 3010)
-
-if (!(Get-HotFix -id $kb -ea SilentlyContinue)) {
-	throw "Hotfix still not found after installation was completed!"
-}
