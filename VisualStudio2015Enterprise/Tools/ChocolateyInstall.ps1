@@ -4,12 +4,12 @@ $url = "http://download.microsoft.com/download/C/7/8/C789377D-7D49-4331-8728-6CE
 
 $tempDir = Join-Path (Get-Item $env:TEMP).FullName "$packageName"
 if ($env:packageVersion -ne $null) {$tempDir = Join-Path $tempDir "$env:packageVersion"; }
+$fileFullPath = "$tempDir\vs_enterprise_ENU.exe"
 
 # Just download the bootstrapper installer always
 if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
 Get-ChocolateyWebFile $packageName $fileFullPath $url
 
-$fileFullPath = "$tempDir\vs_enterprise_ENU.exe"
 if ($env:chocolateyPackageParameters -match "(?<=/layout )\S+") {
 	$layout = $matches[0]
 	if (!([System.IO.Path]::IsPathRooted($layout))) {
