@@ -20,7 +20,7 @@ Start-Process "$fileFullPath" "/Q /x:`"$extractPath`"" -Wait
 
 Write-Host "Installing..."
 $setupPath = "$extractPath\setup.exe"
-Install-ChocolateyInstallPackage "$packageName" "EXE" "$silentArgs" "$setupPath" -validExitCodes @(0, 3010)
+Install-ChocolateyInstallPackage "$packageName" "EXE" "$silentArgs" "$setupPath" -validExitCodes @(0, 3010, 1116)
 
 Write-Host "Removing extracted files..."
 Remove-Item -Recurse "$extractPath"
