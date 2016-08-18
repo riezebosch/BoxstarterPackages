@@ -3,7 +3,7 @@
     <metadata>
         <id>KB2919442</id>
         <version>1.0.20160719</version>
-        <title></title>
+        <title>March 2014 servicing stack update for Windows 8.1 and Windows Server 2012 R2 (KB2919442)</title>
         <authors>Microsoft</authors>
         <owners>Manuel Riezebosch</owners>
         <licenseUrl>https://support.microsoft.com/en-us/kb/2919442</licenseUrl>
@@ -11,9 +11,13 @@
         <iconUrl>https://assets.onestore.ms/cdnfiles/onestorerolling-1509-17011/shell/v1_2/images/logo/microsoft.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
-          Required update to install Visual Studio 2015 on Windows 8.1 or Windows Server 2012 R2.
+The servicing stack includes the files and resources that are required to service a Windows image. This includes the Package Manager executable, the required servicing libraries, and other resources. The servicing stack is included in all Windows installations. The update fixes some issues.
+
+On systems other than Windows 8.1 or Windows Server 2012 R2, this package installs successfully, but does nothing.
+
+This update is required to install Visual Studio 2015 on Windows 8.1 or Windows Server 2012 R2.
         </description>
-        <summary></summary>
+        <summary>The update fixes some issues in the servicing stack of Windows 8.1 and Windows Server 2012 R2.</summary>
         <releaseNotes></releaseNotes>
         <tags>Microsoft Visual Studio 2015 Windows Update 2919442</tags>
         <dependencies>
