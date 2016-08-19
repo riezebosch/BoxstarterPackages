@@ -18,10 +18,10 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'xmlspy*'
-  checksum      = ''
-  checksumType  = 'md5'
-  checksum64    = ''
-  checksumType64= 'md5'
+  checksum      = '23EED3D0F37BDF7F69125A8C32C841C101B6CFBCF8304A8C3DCE26F58E3E90DC'
+  checksumType  = 'sha256'
+  checksum64    = '137A20EFB709FC5BDCB0FB334F0B414A202AEDE5B22575AB9D0BF44C735672AA'
+  checksumType64= 'sha256'
 }
 
 
