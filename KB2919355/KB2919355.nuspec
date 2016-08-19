@@ -3,7 +3,7 @@
     <metadata>
         <id>KB2919355</id>
         <version>1.0.20160719</version>
-        <title></title>
+        <title>Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014 (KB2919355)</title>
         <authors>Microsoft</authors>
         <owners>Manuel Riezebosch</owners>
         <licenseUrl>https://support.microsoft.com/en-us/kb/2919355</licenseUrl>
@@ -11,9 +11,15 @@
         <iconUrl>https://assets.onestore.ms/cdnfiles/onestorerolling-1509-17011/shell/v1_2/images/logo/microsoft.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
-          Required update to install Visual Studio 2015 on Windows 8.1 or Windows Server 2012 R2.
+This update is a cumulative update that includes the security updates and the non-security updates for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 that were released before March 2014. In addition to previous updates, it includes features such as improved Internet Explorer 11 compatibility for enterprise applications, usability improvements, extended mobile device management, and improved hardware support.
+
+All future security and nonsecurity updates for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 require this update to be installed.
+
+On systems other than Windows 8.1 or Windows Server 2012 R2, this package installs successfully, but does nothing.
+
+This update is required to install Visual Studio 2015 on Windows 8.1 or Windows Server 2012 R2.
         </description>
-        <summary></summary>
+        <summary>This update is a cumulative update that includes the security updates and the non-security updates for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 that were released before March 2014.</summary>
         <releaseNotes></releaseNotes>
         <tags>Microsoft Visual Studio 2015 Windows Update KB2919355</tags>
         <dependencies>
