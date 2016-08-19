@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>soapui</id>
+    <version>5.2.1.20160819</version>
+    <title>SoapUI</title>
+    <authors>SmartBear Software</authors>
+    <owners>DanyO riezebosch</owners>
+    <projectUrl>http://www.soapui.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/riezebosch/BoxstarterPackages/master/soapui/soapui.png</iconUrl>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SoapUI is a free and open source cross-platform Functional Testing solution. With an easy-to-use graphical interface, and enterprise-class features, SoapUI allows you to easily and rapidly create and execute automated functional, regression, compliance, and load tests. In a single test environment, SoapUI provides complete test coverage and supports all the standard protocols and technologies. There are simply no limits to what you can do with your tests. Meet SoapUI, the world's most complete testing tool!</description>
+    <summary>SoapUI is a free and open source cross-platform Functional Testing solution. With an easy-to-use graphical interface, and enterprise-class features, SoapUI allows you to easily and rapidly create and execute automated functional, regression, compliance, and load tests. In a single test environment, SoapUI provides complete test coverage and supports all the standard protocols and technologies. There are simply no limits to what you can do with your tests. Meet SoapUI, the world's most complete testing tool!</summary>
+    <tags>soap ui soapui smartbear api web services</tags>
+  </metadata>
+</package>
