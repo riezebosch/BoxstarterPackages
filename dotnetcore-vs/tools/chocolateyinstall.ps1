@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'dotnetcore-vs'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/DotNetCore.1.0.0-VS2015Tools.Preview2.exe'
+$url        = 'https://download.microsoft.com/download/2/F/8/2F864C4E-6980-4AFC-B64E-0AC04837FD6C/DotNetCore.1.0.0-VS2015Tools.Preview2.0.1.exe'
 $url64      = ''
 $params     = '/install /quiet /norestart'
 $packageArgs = @{
@@ -17,10 +17,10 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'dotnetcore-vs*'
-  checksum      = ''
-  checksumType  = 'md5'
+  checksum      = 'C14673F6CE113116199549A7A6989C7F40FC31A4B3287E5921F2A40A0AC431D4'
+  checksumType  = 'sha256'
   checksum64    = ''
-  checksumType64= 'md5'
+  checksumType64= 'sha256'
 }
 
 $installed = $false
