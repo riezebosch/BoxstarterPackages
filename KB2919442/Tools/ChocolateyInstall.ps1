@@ -28,4 +28,4 @@ if ($os.ProductType -eq '1') {
 	$checksum64 = 'C10787E669B484674584A990E069295E8B81B5366F98508010A3AE181B729482'
 }
 
-Install-ChocolateyPackage $packageName 'msu' $silentArgs $url $url64 -checksum $checksum -checksum64 $checksum64 -checksumType 'sha256' -validExitCodes @(0, 3010)
+Install-ChocolateyPackage $packageName 'msu' $silentArgs $url $url64 -checksum $checksum -checksum64 $checksum64 -checksumType 'sha256' -validExitCodes @(0, 3010, 0x80240017)
