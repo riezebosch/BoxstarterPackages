@@ -2,8 +2,7 @@ $kb = "KB2919355"
 $packageName = "KB2919355"
 $silentArgs = "/quiet /norestart /log:`"$env:TEMP\$kb.Install.evt`""
 
-# Get-CimInstance only available on Powershell v3+ which is shipped since Windows 8 & Windows Server 2012
-$os = Get-CimInstance Win32_OperatingSystem -ea SilentlyContinue 
+$os = Get-WmiObject -Class Win32_OperatingSystem
 $version = [Version]$os.Version
 
 if ($version -eq $null -or $version -lt [Version]'6.3' -or $version -ge [Version]'6.4') {
@@ -29,4 +28,4 @@ if ($os.ProductType -eq '1') {
 	$checksum64 = 'B0C9ADA530F5EE90BB962AFA9ED26218C582362315E13B1BA97E59767CB7825D'
 }
 
-Install-ChocolateyPackage $packageName 'msu' $silentArgs $url $url64 -checksum $checksum -checksum64 $checksum64 -checksumType 'sha256' -validExitCodes @(0, 3010)
+Install-ChocolateyPackage $packageName 'msu' $silentArgs $url $url64 -checksum $checksum -checksum64 $checksum64 -checksumType 'sha256' -validExitCodes @(0, 3010, 0x80240017)

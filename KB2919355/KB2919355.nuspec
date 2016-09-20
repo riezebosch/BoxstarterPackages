@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KB2919355</id>
-        <version>1.0.20160719</version>
+        <version>1.0.20160915</version>
         <title>Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014 (KB2919355)</title>
         <authors>Microsoft</authors>
         <owners>Manuel Riezebosch</owners>
@@ -20,10 +20,13 @@ On systems other than Windows 8.1 or Windows Server 2012 R2, this package instal
 This update is required to install Visual Studio 2015 on Windows 8.1 or Windows Server 2012 R2.
         </description>
         <summary>This update is a cumulative update that includes the security updates and the non-security updates for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 that were released before March 2014.</summary>
-        <releaseNotes></releaseNotes>
+        <releaseNotes>
+1.0.20160915:
+- fixed installation on PowerShell 2.0
+        </releaseNotes>
         <tags>Microsoft Visual Studio 2015 Windows Update KB2919355</tags>
         <dependencies>
-          <dependency id="KB2919442" version="1.0.20160719" />
+          <dependency id="KB2919442" version="1.0.20160915" />
         </dependencies>
     </metadata>
   <files>
