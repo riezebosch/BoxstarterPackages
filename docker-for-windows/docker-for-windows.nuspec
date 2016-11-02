@@ -16,15 +16,15 @@
     <tags>docker-for-windows admin</tags>
     <summary>Installs Docker for Windows including Docker service.</summary>
     <description>
-        An integrated, easy-to-deploy environment for building, assembling, and shipping applications from a Windows PC, Docker for Windows is a native Windows application with a native user interface and auto-update capability, deeply integrated with Windows native virtualization, Hyper-V, networking and file system, making it faster and more reliable than previous ways of getting Docker on a Windows PC.   
-        
-        Requires Microsoft Windows 10 Professional or Enterprise 64-bit
-        For previous versions get [Docker Toolbox](https://www.docker.com/products/docker-toolbox) (no package yet).
+An integrated, easy-to-deploy environment for building, assembling, and shipping applications from a Windows PC, Docker for Windows is a native Windows application with a native user interface and auto-update capability, deeply integrated with Windows native virtualization, Hyper-V, networking and file system, making it faster and more reliable than previous ways of getting Docker on a Windows PC.   
 
-      ## Note:
-      The [download url](https://download.docker.com/win/stable/InstallDocker.msi) that is used by this package always refers to the latest version.
-      If the installer is updated but this package is not you can supply the checksum from this [location](https://download.docker.com/win/stable/InstallDocker.msi.sha256sum) on the command line using --checksum and --checksumtype parameters.   
-      Or you just wait a little longer.    
+Requires Microsoft Windows 10 Professional or Enterprise 64-bit
+For previous versions get [Docker Toolbox](https://www.docker.com/products/docker-toolbox) (no package yet).
+
+## Note:
+The [download url](https://download.docker.com/win/stable/InstallDocker.msi) that is used by this package always refers to the latest version.
+If the installer is updated but this package is not you can supply the checksum from this [location](https://download.docker.com/win/stable/InstallDocker.msi.sha256sum) on the command line using --checksum and --checksumtype parameters.   
+Or you just wait a little longer.    
     </description>
   </metadata>
   <files>
