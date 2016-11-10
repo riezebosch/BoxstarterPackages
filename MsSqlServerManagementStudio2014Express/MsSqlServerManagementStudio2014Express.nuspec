@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
 		<id>MsSqlServerManagementStudio2014Express</id>
-		<version>12.0.2000.20160527</version>
+		<version>12.2.5000.20161110</version>
         <title>SQL Server 2014 Express Management Studio</title>
         <authors>Microsoft</authors>
         <owners>riezebosch</owners>
@@ -15,7 +15,7 @@
 			My packages are available on https://github.com/riezebosch/BoxstarterPackages.git. You can fork this repository and suggest improvements using pull requests.
 		</description>
         <summary>Installs SQL Server Management Studio 2014 Express</summary>
-        <releaseNotes>Required dependency on .NET 3.5 framework</releaseNotes>
+        <releaseNotes>New download version and checksum added.</releaseNotes>
         <language>en-US</language>
         <tags>sql mssql server 2014 express ssms management studio</tags>
         <dependencies>
