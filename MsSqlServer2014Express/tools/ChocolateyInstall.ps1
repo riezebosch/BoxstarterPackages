@@ -1,8 +1,10 @@
-Import-Module (Join-Path $(Split-Path -parent $MyInvocation.MyCommand.Definition) 'Helpers.psm1')
+Import-Module (Join-Path $PSScriptRoot 'Helpers.psm1')
 
-Install 'MSSQLServer2014Express' `
-        'https://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLEXPR_x86_ENU.exe' `
-        'https://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x64/SQLEXPR_x64_ENU.exe' `
-        '33C0112905B62B6BAD883112C2F49B50AA12C679' `
-        '0C90C147A1C2A550165C9301AE7A6C604E318E51' `
-        'SQLEXPR.exe'
+$package = 'MSSQLServer2014Express' 
+$url = "https://download.microsoft.com/download/2/A/5/2A5260C3-4143-47D8-9823-E91BB0121F94/SQLEXPR_x86_ENU.exe"
+$url64 = "https://download.microsoft.com/download/2/A/5/2A5260C3-4143-47D8-9823-E91BB0121F94/SQLEXPR_x64_ENU.exe"
+$checksum = '0eff1354916410437c829e98989e5910d9605b2df31977bc33ca492405a0a9ab'
+$checksum64 = 'cc35e94030a24093a62e333e900c2e3c8f1eb253a5d73230a9f5527f1046825b'
+$configurationFile = Join-Path -Resolve $PSScriptRoot '..\Configuration.ini' 
+
+Install $package $url $url64 $checksum $checksum64 'SQLEXPR.exe' $configurationFile

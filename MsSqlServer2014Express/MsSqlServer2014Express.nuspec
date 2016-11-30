@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>MsSqlServer2014Express</id>
-    <version>12.0.4100.20160621</version>
-    <title>SQL Server 2014 Express with SP1</title>
+    <id>MSSQLServer2014Express</id>
+    <version>12.2.5000.20160811</version>
+    <title>SQL Server 2014 Express with SP2</title>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
     <projectUrl>http://msdn.microsoft.com/nl-nl/evalcenter/dn434042.aspx</projectUrl>
@@ -11,15 +11,38 @@
     <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      This package installs SQL Server 2014 Express with SP1. You can use install arguments to add additional arguments or override arguments to supply specific arguments.
+      This package installs SQL Server 2014 Express with SP2. You can use install arguments to add additional arguments or override arguments to supply specific arguments.
+
+      Examples:
+
+      Install with SQL Authentication. You have to specify the "sa" password.
+      ```
+      choco install MSSQLServer2014Express -params='/SECURITYMODE="SQL" /SAPWD="SetYourOwn"'
+      ```
+
+      Install overriding the installation directory and other parameters.
+      ```
+      choco install MSSQLServer2014Express `
+        -params='/SECURITYMODE="SQL" /SAPWD="SetYourOwnComplex123" /InstallSQLDataDir="C:\SQLData" /SQLBACKUPDIR="C:\SQLData\Backup" /SQLUSERDBDIR="C:\SQLData" /SQLTEMPDBDIR="C:\SQLData"'
+      ```
+
+      Install with overriding some parameters, and your own Configuraiton.ini (by specifing the URL to Configuration.ini).
+      ```
+      choco install MSSQLServer2014Express `
+        -params='/SECURITYMODE="SQL" /SAPWD="SetYourOwnComplex123" /InstallSQLDataDir="C:\SQLData" /SQLBACKUPDIR="C:\SQLData\Backup" /SQLUSERDBDIR="C:\SQLData" /SQLTEMPDBDIR="C:\SQLData" /ConfigurationFile="http://bit.ly/2doxBU1"'
+      ```
+
+      If you specify SECURITYMODE="SQL" you have to provide the SAPWD or the setup will fail. 
+      SAPWD should be a complex value or the setup will fail.
+
+      If you specify SECURITYMODE="SQL" but do not provide a value for SQLSYSADMINACCOUNTS, 
+      the current account will be added to SQL Server Express as a SQL Server admin.
+      
     </description>
-    <summary>Installs SQL Server 2014 Express with SP1</summary>
-    <releaseNotes>Added checksum for downloads. Fixed uninstall.</releaseNotes>
+    <summary>Installs SQL Server 2014 Express with SP2</summary>
+    <releaseNotes>Update download url for SP2 release.</releaseNotes>
     <copyright />
     <language>en-US</language>
-    <tags>mssql sql server 2014 express sp1</tags>
+    <tags>mssql sql server 2014 express sp2</tags>
   </metadata>
-  <files>
-    <file src="tools\**\*" target="tools" />
-  </files>
 </package>

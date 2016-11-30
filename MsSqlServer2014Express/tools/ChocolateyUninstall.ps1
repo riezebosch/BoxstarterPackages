@@ -1,4 +1,4 @@
-$packageName = "MsSqlServer2014Express"
+$packageName = "MSSQLServer2014Express"
 $chocolateyTempDir = Join-Path (Get-Item $env:TEMP).FullName "chocolatey"
 $tempDir = Join-Path $chocolateyTempDir $packageName
 $fileFullPath = "$tempDir\SQLEXPR.exe"
@@ -22,4 +22,3 @@ Uninstall-ChocolateyPackage "$packageName" "EXE" "$silentArgs" "$setupPath" -val
 
 Write-Host "Removing SQL Server Express Extracted Files..."
 rm -r "$extractPath"
-

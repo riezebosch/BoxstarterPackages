@@ -75,35 +75,14 @@ function GenerateInstallArguments($parameters, $configurationFile)
 }
 
 function Install {
-<#
-.SYNOPSIS
-Installs SQL Server Express.
-
-.DESCRIPTION
-Installs SQL Serve with ability to specify configuraiton file and command line parameters.
-
-.PARAMETER PackageName
-The name of the SQLServerExpress package.
-
-.PARAMETER Url
-The url of the web installer.
-
-.EXAMPLE
-Install '[PackageName]' 'http://download.microsoft.com/download/....'
-
-.OUTPUTS
-None
-
-.LINK
-Install-ChocolateyPackage
-#>
 param(
     [string] $packageName,
     [string] $url,
     [string] $url64,
     [string] $checksum,
     [string] $checksum64,
-    [string] $exeName
+    [string] $exeName,
+    [string] $defaultConfigurationFile
 )
     Write-Debug "Running 'Install' for $packageName with url:`'$url`'";
 
@@ -114,8 +93,6 @@ param(
         2147781575, # pending restart required
         2147205120  # pending restart required for setup update
     )
-
-    $defaultConfigurationFile = (Join-Path $PSScriptRoot 'Configuration.ini')
 
     $packageParameters = ParseParameters $env:chocolateyPackageParameters
     $configurationFile = GetConfigurationFile $packageParameters $defaultConfigurationFile
@@ -141,55 +118,6 @@ $silentArgs"
 
     Write-Host "Removing SQL Server Express Extracted Files..."
     rm -r "$extractPath"
-}
-
-function Uninstall {
-<#
-.SYNOPSIS
-Uninstalls SQL Server Express.
-
-.DESCRIPTION
-Uninstalls SQL Server Express.
-
-.PARAMETER PackageName
-The name of the SQLServerExpress package.
-
-.PARAMETER ApplicationName
-The VisualStudio app name - i.e. 'Microsoft Visual Studio Community 2015'.
-
-.PARAMETER UninstallerName
-This name of the installer executable - i.e. 'vs_community.exe'.
-
-.EXAMPLE
-Uninstall 'MSSQLServer2014Express' 'Microsoft Visual Studio Community 2015' 'vs_community.exe'
-
-.OUTPUTS
-None
-
-.LINK
-Uninstall-ChocolateyPackage
-#>
-param(
-  [string] $packageName,
-  [string] $applicationName,
-  [string] $uninstallerName
-)
-    <#
-    Write-Debug "Running 'Uninstall-VS' for $packageName with url:`'$url`'";
-
-    $installerType = 'exe'
-    $silentArgs = '/Uninstall /force /Passive /NoRestart'
-
-    $app = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like "$applicationName*"} | Sort-Object { $_.Name } | Select-Object -First 1
-    if ($app -ne $null)
-    {
-        $uninstaller = Get-Childitem "$env:ProgramData\Package Cache\" -Recurse -Filter $uninstallerName | ? { $_.VersionInfo.ProductVersion.StartsWith($app.Version)}
-        if ($uninstaller -ne $null)
-        {
-            Uninstall-ChocolateyPackage $packageName $installerType $silentArgs $uninstaller.FullName
-        }
-    }
-    #>
 }
 
 Export-ModuleMember *
