@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>WinIIS</id>
+		<version>2016.11.02</version>
+		<title>Windows IIS</title>
+		<authors>Microsoft</authors>
+		<packageSourceUrl>https://github.com/Boyan-Kostadinov/BoxStarter</packageSourceUrl>
+		<docsUrl>https://github.com/Boyan-Kostadinov/BoxStarter</docsUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<summary></summary>
+		<tags></tags>
+		<description>
+		Windows IIS Installer
+		</description>
+		<releaseNotes></releaseNotes>
+	</metadata>
+</package>
