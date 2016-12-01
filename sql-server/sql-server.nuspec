@@ -43,8 +43,15 @@ With the exception that:
 * SQLSYSADMINACCOUNTS = current user
 * SQLSVCACCOUNT = NT AUTHORITY\Network Service 
 
+To add additional paramaters use the `-ia` command line parameter of chocolatey. 
+To replace the parameters provided by this package add the `-o` command line parameter.
+
 ## Uninstallation
 The SetupARP is invoked by the uninstall script. Unfortunately this is NOT UNATTENDED (yet).
+
+## ISO Location
+Set the ISO location with the $env:sqlserver:isolocation environment variable. The ISO will before
+downloaded to the downloads folder of the current user otherwise.
     ]]></description>
     <projectUrl>https://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/</projectUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>

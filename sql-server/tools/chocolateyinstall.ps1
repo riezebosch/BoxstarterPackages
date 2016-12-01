@@ -7,16 +7,17 @@ $url         = 'http://care.dlservice.microsoft.com/dl/download/F/E/9/FE9397FA-B
 $user = whoami
 $silentArgs  = "/q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT=`"NT AUTHORITY\Network Service`" /SQLSYSADMINACCOUNTS=`"$user`" /AGTSVCACCOUNT=`"NT AUTHORITY\Network Service`" /SQLSVCINSTANTFILEINIT=`"True`" /IACCEPTSQLSERVERLICENSETERMS"
 
-#$chocTempDir =Join-Path (Get-Item $env:TEMP).FullName "chocolatey"
-#$tempDir = Join-Path $chocTempDir "$packageName"
-#if ($env:packageVersion -ne $null) {$tempDir = Join-Path $tempDir "$env:packageVersion"; }
-$tempDir = "C:\SQL2016"
+$isolocation = $env:sqlserver:isolocation
+if ($isolocation -eq $null) {
+    $isolocation = Join-Path $env:userprofile "Downloads"
+}
 
-if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
-$fileFullPath = Join-Path $tempDir "SQLServer2016-x64-ENU.iso"
+if (![System.IO.Directory]::Exists($isolocation)) { [System.IO.Directory]::CreateDirectory($isolocation) | Out-Null }
+$fileFullPath = Join-Path $isolocation "SQLServer2016-x64-ENU.iso"
 
 Get-ChocolateyWebFile $packageName $fileFullPath $url -Checksum "CE21BF1C08EC1AC48EBB4988A8602C7813034EA3" -ChecksumType "sha1"
-WRite-Host $fileFullPath
+
 Mount-DiskImage -ImagePath $fileFullPath
 $driveLetter = (Get-DiskImage $fileFullPath | Get-Volume).DriveLetter
+
 Install-ChocolateyInstallPackage $packageName "EXE" $silentArgs "${driveLetter}:\setup.exe" -validExitCodes 0, 3010
