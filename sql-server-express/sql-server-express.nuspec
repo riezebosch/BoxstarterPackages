@@ -2,24 +2,19 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>sql-server-express</id>
-    <title>Microsoft SQL Server 2016 Express (Install)</title>
-    <version>13.0.1601.5</version>
+    <title>Microsoft SQL Server 2016 Express with SP1</title>
+    <version>13.1.4001.0</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
-    <summary>Installs SQL Server 2016 Express database engine.</summary>
+    <summary>Installs SQL Server 2016 Express with SP1 database engine.</summary>
     <description>
       Entry-level, free database that is ideal for deploying small databases in production environments. Build desktop and small server, data-driven applications up to 10 GB of disk size.
     </description>
-    <projectUrl>https://www.microsoft.com/en-us/server-cloud/products/sql-server-editions/sql-server-express.aspx</projectUrl>
+    <projectUrl>https://www.microsoft.com/en-us/sql-server/sql-server-editions-express</projectUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
-    <!--<projectSourceUrl></projectSourceUrl>
-    <docsUrl></docsUrl>
-    <mailingListUrl></mailingListUrl>
-    <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>sql server express admin 2016 express</tags>
-    <copyright>2016</copyright>
+    <tags>sql server express admin 2016 express SP1</tags>
+    <copyright>2016 Microsoft</copyright>
     <licenseUrl>http://download.microsoft.com/download/F/D/5/FD5E5C28-6973-4273-8737-D69AA3BEA243/SQL_Server_2016_Licensing_Datasheet_EN_US.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
@@ -27,8 +22,7 @@
       <dependency id="vcredist2013" version="12.0.30501.20150616" />
       <dependency id="KB2919355" version="1.0.20160719" />
     </dependencies>
-    <releaseNotes>https://msdn.microsoft.com/en-us/library/dn876712.aspx?f=255&amp;MSPPError=-2147217396</releaseNotes>
-    <!--<provides></provides>-->
+    <releaseNotes>https://support.microsoft.com/en-us/kb/3182545</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
