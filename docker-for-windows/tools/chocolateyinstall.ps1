@@ -10,7 +10,6 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   fileType      = 'MSI'
   url           = $url
-  url64bit      = $url64
 
   softwareName  = 'docker*'
 
