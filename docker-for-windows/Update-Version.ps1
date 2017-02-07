@@ -1,8 +1,9 @@
-$MSIFile = "$env:TEMP\InstallDocker.msi"
-(New-Object System.Net.WebClient).DownloadFile('https://download.docker.com/win/stable/InstallDocker.msi', $MSIFile)
+$channel = "stable"
+$MSIFile = "$env:TEMP\InstallDocker.$channel.msi"
+(New-Object System.Net.WebClient).DownloadFile("https://download.docker.com/win/$channel/InstallDocker.msi", $MSIFile)
 
 . .\Get-DockerVersion.ps1
-$version = Get-DockerForWindowsVersion "$env:TEMP\InstallDocker.msi"
+$version = Get-DockerForWindowsVersion $MSIFile
 Write-Output "Version from msi: $version"
 
 $spec = "docker-for-windows.nuspec"
@@ -11,5 +12,15 @@ $spec = "docker-for-windows.nuspec"
 $install = ".\tools\chocolateyinstall.ps1"
 (gc -Path $install) -replace "\`$version = `".*`"", "`$version = `"$version`"" | Out-File $install -Encoding utf8
 
-$checksum = Invoke-WebRequest -Uri "https://download.docker.com/win/stable/$version/InstallDocker.msi.sha256sum" -UseBasicParsing
-(gc -Path $install) -replace "checksum      = '.*'", "checksum      = '$($checksum.Content.SubString(0, 64))'" | Out-File $install -Encoding utf8
+$checksumUrl = "https://download.docker.com/win/$channel/$version/InstallDocker.msi.sha256sum"
+$checksum = Invoke-WebRequest -Uri $checksumUrl -UseBasicParsing -ea SilentlyContinue
+if ($checksum -ne $null) {
+    $checksum = $checksum.Content.SubString(0, 64)
+}
+else {
+    Write-Warning "Checksum download failed from url $checksumUrl. Calculating locally."
+    $checksum = . checksum -f $MSIFile -t sha256
+}
+
+Write-Host "Checksum: $checksum"
+(gc -Path $install) -replace "checksum      = '.*'", "checksum      = '$checksum'" | Out-File $install -Encoding utf8
