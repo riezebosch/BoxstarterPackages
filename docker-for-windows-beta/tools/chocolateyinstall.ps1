@@ -1,4 +1,4 @@
-﻿$version = "1.13.0.9805"
+﻿$version = "1.13.1.9961"
 $ErrorActionPreference = 'Stop';
 
 $packageName= 'docker-for-windows-beta'
@@ -13,7 +13,7 @@ $packageArgs = @{
 
   softwareName  = 'docker*'
 
-  checksum      = '65f654019e156bb5e3e361f464b4d66d0b49cb6a04cbcaa5c269f68f998db4b5'
+  checksum      = '1925B9AE114A24ABAB878558E56CC470F252AF5B9B96B05BA8B363299DED1E5A'
   checksumType  = 'sha256'
  
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
