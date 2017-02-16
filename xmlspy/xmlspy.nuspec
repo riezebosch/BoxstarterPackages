@@ -4,13 +4,13 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
-    <title>Altova XMLSpy 2016 Enterprise (Install)</title>
-    <version>2016.2.1.20160819</version>
+    <title>Altova XMLSpy 2017 Enterprise (Install)</title>
+    <version>2017.00.02.20170216</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
-      Altova XMLSpy® 2016 is the industry's best-selling XML editor for modeling, editing, transforming, and debugging XML-related technologies. It offers the world’s leading graphical schema designer, a code generator, file converters, debuggers, profilers, full database integration, support for XSLT, XPath, XQuery, WSDL, SOAP, XBRL, JSON, and Office Open XML (OOXML) , plus Visual Studio and Eclipse integration, and more.
-      
+      XMLSpy is the industry’s best selling XML editor and development environment for all XML-related technologies. It offers the world’s leading schema designer, code generation, file converters, debuggers, profilers, full database integration, support for XSD, XSLT, XPath, XQuery, WSDL, SOAP, XBRL, and Office Open XML, and much more.
+
       **Note:** The software *must* be activated before use. You can request a free 30 day trial key from the activation wizard.
     </description>
     <projectUrl>http://www.altova.com/xmlspy.html</projectUrl>
@@ -19,7 +19,7 @@
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>xmlspy altova 2016 admin trial</tags>
+    <tags>xmlspy altova 2017 admin trial</tags>
     <!--<copyright></copyright>-->
     <licenseUrl>http://www.altova.com/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
