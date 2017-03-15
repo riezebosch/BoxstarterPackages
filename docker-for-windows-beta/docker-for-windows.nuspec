@@ -6,8 +6,7 @@
     <version>17.3.0.10300-beta</version>
      <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
     <owners>riezebosch</owners>
-
-    <title>Docker for Windows (Install)</title>
+    <title>Docker for Windows (Edge)</title>
     <authors>Docker Inc.</authors>
     <projectUrl>https://docker.com</projectUrl>
     <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-for-windows/docker.png</iconUrl>
@@ -16,19 +15,18 @@
     <tags>docker-for-windows admin</tags>
     <summary>Installs Docker for Windows including Docker service.</summary>
     <description>
-An integrated, easy-to-deploy environment for building, assembling, and shipping applications from a Windows PC, Docker for Windows is a native Windows application with a native user interface and auto-update capability, deeply integrated with Windows native virtualization, Hyper-V, networking and file system, making it faster and more reliable than previous ways of getting Docker on a Windows PC.   
+This installer provides the **latest Edge release** of Docker for Windows, offers cutting edge features along with [experimental features in Docker Engine](https://github.com/docker/docker/blob/master/experimental/README.md), which are enabled by default and configurable on [Docker Daemon settings for experimental mode](https://docs.docker.com/docker-for-windows/index#daemon-experimental-mode). 
 
-Requires Microsoft Windows 10 Professional or Enterprise 64-bit
-For previous versions get [Docker Toolbox](https://www.docker.com/products/docker-toolbox) (no package yet).
+This is the best channel to use if you want to experiment with features under development, and can weather some instability and bugs. This channel is a continuation of the Edge program, where you can provide feedback as the apps evolve. Releases are typically more frequent than for Stable, often one or more per month. 
 
-## Note:
-This installer offers cutting edge features and comes with the experimental version of Docker Engine, which is described in the [Docker Experimental Features README](https://github.com/docker/docker/tree/master/experimental) on GitHub.
+We collect all usage data on Edge releases across the board.   
 
-This is the best channel to use if you want to experiment with features we are working on as they become available, and can weather some instability and bugs. This channel is a continuation of the beta program, where you can provide feedback as the apps evolve. Releases are typically more frequent than for stable, often one or more per month.
-
-## Note:
-This packages uses a direct download link to the specific beta version!     
+> ## Important Notes:
+> * Docker for Windows requires 64bit Windows 10 Pro, Enterprise and Education (1511 November update, Build 10586 or later) and Microsoft Hyper-V. Please see [What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) for a full list of prerequisites.
+> * You can switch between Edge and Stable versions, but you must have only one app installed at a time. Also, you will need to save images and export containers you want to keep before uninstalling the current version before installing another. For more about this, see the [FAQs about Stable and Edge channels](https://docs.docker.com/docker-for-windows/faqs/#questions-about-stable-and-edge-channels). 
+> * The installer that is used is **always the latest version** and therby not tied to the version of this package.  
     </description>
+    <releaseNotes>https://docs.docker.com/docker-for-windows/release-notes/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
