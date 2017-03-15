@@ -1,9 +1,8 @@
-﻿$version = "1.13.1.10072"
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
 $packageName= 'docker-for-windows'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = "https://download.docker.com/win/stable/$version/InstallDocker.msi"
+$url        = "https://download.docker.com/win/stable/InstallDocker.msi"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -13,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'docker*'
 
-  checksum      = '07aa146e8e0848c360dc7fa4cddff65413b72db65e9b11a9e80fc9c75f0acfc9'
+  checksum      = '8e7680db9ca049d31a0af71528d0bac507c4e8a52a87aa5c0b1d2a5eb83ef2e4'
   checksumType  = 'sha256'
  
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
