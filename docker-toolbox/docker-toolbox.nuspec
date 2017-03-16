@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>docker-toolbox</id>
+    <version>17.03.0</version>
+    <title>Docker Toolbox</title>
+    <authors>Docker Inc.</authors>
+    <projectUrl>https://docker.com</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-toolbox/docker_tooblox_0.png</iconUrl>
+    <licenseUrl>https://github.com/docker/docker/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>docker-toolbox admin legacy</tags>
+    <summary>Docker Toolbox is for older Mac and Windows systems that do not meet the requirements of Docker for Mac and Docker for Windows.</summary>
+    <description>
+Docker Toolbox is an installer for quick setup and launch of a Docker environment on older Mac and Windows systems that do not meet the requirements of the new [Docker for Mac](https://docs.docker.com/docker-for-mac/) and [Docker for Windows](https://docs.docker.com/docker-for-windows/) apps.    
+
+Toolbox includes these Docker tools:
+
+* Docker Machine for running docker-machine commands
+* Docker Engine for running the docker commands
+* Docker Compose for running the docker-compose commands
+* Kitematic, the Docker GUI
+* a shell preconfigured for a Docker command-line environment
+* Oracle VirtualBox
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
