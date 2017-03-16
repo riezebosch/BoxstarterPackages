@@ -20,9 +20,27 @@ Toolbox includes these Docker tools:
 * Docker Machine for running docker-machine commands
 * Docker Engine for running the docker commands
 * Docker Compose for running the docker-compose commands
-* Kitematic, the Docker GUI
+* Kitematic, the Docker GUI (deselected)
 * a shell preconfigured for a Docker command-line environment
-* Oracle VirtualBox
+* Oracle VirtualBox (deselected)
+
+## Maintainers note:
+Docker Client for Windows and Docker Machine for Windows are 'fixed' components.
+Docker Compose for Windows is 'optional' but selected by me.
+VirtualBox and Kitematic for Windows (Alpha) are deselected by me.
+You can override this by specifying `-ia /COMPONENTS="kitematic,virtualbox,dockercompose"`.
+
+Git for Windows should be optional but I could not deselect it.
+
+The following tasks can be selected/deselected:
+
+```
+desktopicon = Create a desktop shortcut
+modifypath  = Add docker binaries to PATH
+upgradevm   = Upgrade Boot2Docker VM
+```
+
+You can specify this with `-ia /TASKS="desktopicon,modifypath,upgradevm"`.
     </description>
   </metadata>
   <files>
