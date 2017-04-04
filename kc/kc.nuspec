@@ -14,7 +14,6 @@
 * Open Visual Studio Code
 * Open de folder waarin je een presentatie wilt maken
 * Open de integrated terminal (waarschijnlijk met CTRL+')
-* kc init
 * kc serve
 * Watch and learn
 
@@ -23,7 +22,6 @@
 * Clone vanaf gitlab https://gitlab.rhea.infosupport.net/kenniscentrum/
 * Open Visual Studio Code (rechtermuisknop op de folder)
 * Open de integrated terminal
-* kc install
 * kc serve
 
     </description>
