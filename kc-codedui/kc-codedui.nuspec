@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kc-codedui</id>
+    <version>0.0.1</version>
+    <title>Coded UI</title>
+    <authors>Manuel Riezebosch</authors>
+    <tags>kc-codedui</tags>
+    <summary>Installeert de tools die nodig zijn voor de codedui training.</summary>
+    <description>
+## Coded UI Training
+
+Installeert:
+
+* Docker Toolbox
+* ASP.NET Core MVC demo applicatie Music Store
+
+    </description>
+    <dependencies>
+      <dependency id="docker-toolbox" version="17.03.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
