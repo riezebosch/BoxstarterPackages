@@ -12,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'docker*'
 
-  checksum      = '8e7680db9ca049d31a0af71528d0bac507c4e8a52a87aa5c0b1d2a5eb83ef2e4'
+  checksum      = 'e3b1c1199a2b66c516bb993950e6e8f59578a2094db3b610aa4c72ea50130220'
   checksumType  = 'sha256'
  
   silentArgs    = "/COMPONENTS=`"docker,dockermachine,dockercompse`" /TASKS=`"modifypath,upgradevm`" /qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
