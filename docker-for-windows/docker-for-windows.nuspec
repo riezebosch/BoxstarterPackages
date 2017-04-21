@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>docker-for-windows</id>
-    <version>17.3.1.10743</version>
+    <version>17.3.1.20170421</version>
      <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
     <owners>riezebosch</owners>
 
