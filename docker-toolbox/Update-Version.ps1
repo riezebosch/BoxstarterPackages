@@ -1,6 +1,6 @@
 $channel = "stable"
 $installer = "$env:TEMP\DockerToolbox.$channel.exe"
-#(New-Object System.Net.WebClient).DownloadFile("https://download.docker.com/win/$channel/DockerToolbox.exe", $installer)
+(New-Object System.Net.WebClient).DownloadFile("https://download.docker.com/win/$channel/DockerToolbox.exe", $installer)
 
 if (!([System.Diagnostics.FileVersionInfo]::GetVersionInfo($installer).ProductVersion.ToString() -match '\d+\.\d+\.\d+')) {
     Write-Error 'failed to extract version from installer'
