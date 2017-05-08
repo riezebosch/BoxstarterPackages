@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'dotnetcore-vs'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://download.microsoft.com/download/5/5/7/557D02A5-C3D0-4EF6-A570-4F75CD0DA5BF/DotNetCore.1.0.1-VS2015Tools.Preview2.0.2.exe'
+$url        = 'https://download.microsoft.com/download/F/6/E/F6ECBBCC-B02F-424E-8E03-D47E9FA631B7/DotNetCore.1.0.1-VS2015Tools.Preview2.0.3.exe'
 $url64      = ''
 $params     = '/install /quiet /norestart'
 $packageArgs = @{
@@ -17,16 +17,16 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'dotnetcore-vs*'
-  checksum      = '1ae5796f397522a1be253b5fa45af3a5d771181fb28cebea6aba5530d04a5eb3'
+  checksum      = '03CD219487C542E20116A6733833F6E6A83B317646763E2B6CA210C59DE924AD'
   checksumType  = 'sha256'
-  checksum64    = ''
+  checksum64    = '03CD219487C542E20116A6733833F6E6A83B317646763E2B6CA210C59DE924AD'
   checksumType64= 'sha256'
 }
 
 $installed = $false
 if ($env:chocolateyPackageParameters -match "(?<=/layout )\S+") {
 	$layout = $matches[0]
-	$fileFullPath = Join-Path $layout "DotNetCore.1.0.1-VS2015Tools.Preview2.0.2.exe"
+	$fileFullPath = Join-Path $layout "DotNetCore.1.0.1-VS2015Tools.Preview2.0.3.exe"
 
 	if (Test-Path $fileFullPath) {
 		Write-Host "Installing from layout location at: $layout."
