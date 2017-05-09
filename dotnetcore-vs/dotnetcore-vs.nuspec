@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>dotnetcore-vs</id>
     <title>.NET Core tools Preview 2 for Visual Studio 2015</title>
-    <version>1.0.0.20160916-Preview203</version>
+    <version>2.0.3-Preview</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
     <summary></summary>
