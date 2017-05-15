@@ -1,24 +1,14 @@
-$channel = "beta"
-$MSIFile = "$env:TEMP\InstallDocker.$channel.msi"
-(New-Object System.Net.WebClient).DownloadFile("https://download.docker.com/win/$channel/InstallDocker.msi", $MSIFile)
+$installer = "$env:TEMP\Docker for Windows Installer.exe"
+Start-BitsTransfer -Source https://download.docker.com/win/edge/Docker%20for%20Windows%20Installer.exe -Destination $installer
 
-. .\Get-DockerVersion.ps1
-$version = Get-DockerForWindowsVersion $MSIFile
-Write-Output "Version from msi: $version"
 
+$version = Get-Date -Format 'yy.MM'
+
+Write-Output "Version from installer: $version"
 $spec = "docker-for-windows.nuspec"
-(gc -Path $spec -Encoding UTF8) -replace "<version>.*</version>", "<version>$version-beta</version>" | Out-File $spec -Encoding utf8
+(gc -Path $spec -Encoding UTF8) -replace "<version>.*</version>", "<version>$version-edge</version>" | Out-File $spec -Encoding utf8
 
-$checksumUrl = "https://download.docker.com/win/$channel/InstallDocker.msi.sha256sum"
-$checksum = Invoke-WebRequest -Uri $checksumUrl -UseBasicParsing -ea SilentlyContinue
-if ($checksum -ne $null) {
-    $checksum = $checksum.Content.SubString(0, 64)
-}
-else {
-    Write-Warning "Checksum download failed from url $checksumUrl. Calculating locally."
-    $checksum = . checksum -f $MSIFile -t sha256
-}
-
+$checksum = & checksum -f $installer -t sha256
 Write-Host "Checksum: $checksum"
 $install = ".\tools\chocolateyinstall.ps1"
 (gc -Path $install) -replace "checksum      = '.*'", "checksum      = '$checksum'" | Out-File $install -Encoding utf8

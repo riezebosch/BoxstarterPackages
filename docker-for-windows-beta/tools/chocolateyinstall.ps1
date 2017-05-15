@@ -2,7 +2,7 @@
 
 $packageName= 'docker-for-windows-beta'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = "https://download.docker.com/win/beta/InstallDocker.msi"
+$url        = "https://download.docker.com/win/edge/Docker%20for%20Windows%20Installer.exe"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -12,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'docker*'
 
-  checksum      = '2540f24b03da9848def798695e39a72a168f4d76b666a688748455cb341ea8ef'
+  checksum      = 'E4833D1DBA9B750A5EE79A5E7BF3840318ACE7FA300FA80D335A2958FFB63A52'
   checksumType  = 'sha256'
  
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
