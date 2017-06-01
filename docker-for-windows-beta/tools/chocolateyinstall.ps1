@@ -12,7 +12,7 @@ $packageArgs = @{
 
   softwareName  = 'docker*'
 
-  checksum      = 'E4833D1DBA9B750A5EE79A5E7BF3840318ACE7FA300FA80D335A2958FFB63A52'
+  checksum      = '0BC80ADF1448EF00F7ED3084DB5C10F42C3AC6C6185E388DFC1B5765C1C7D5E0'
   checksumType  = 'sha256'
  
   silentArgs    = "install --quiet"

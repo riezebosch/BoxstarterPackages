@@ -6,7 +6,7 @@ $packageName = 'docker-for-windows'
 $softwareName = 'docker*'
 $installerType = 'EXE' 
 
-$silentArgs = 'unintall --quiet'
+$silentArgs = 'uninstall --quiet'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
 if ($installerType -ne 'MSI') {
   $validExitCodes = @(0)
