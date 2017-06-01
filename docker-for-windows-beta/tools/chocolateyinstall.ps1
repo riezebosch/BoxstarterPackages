@@ -7,7 +7,7 @@ $url        = "https://download.docker.com/win/edge/Docker%20for%20Windows%20Ins
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'MSI'
+  fileType      = 'EXE'
   url           = $url
 
   softwareName  = 'docker*'
@@ -15,7 +15,7 @@ $packageArgs = @{
   checksum      = 'E4833D1DBA9B750A5EE79A5E7BF3840318ACE7FA300FA80D335A2958FFB63A52'
   checksumType  = 'sha256'
  
-  silentArgs    = "--quiet"
+  silentArgs    = "install --quiet"
   validExitCodes= @(0, 3010, 1641)
 }
 
