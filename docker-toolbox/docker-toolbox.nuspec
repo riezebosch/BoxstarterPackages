@@ -44,6 +44,9 @@ upgradevm   = Upgrade Boot2Docker VM
 
 You can specify this with `-ia /TASKS="desktopicon,modifypath,upgradevm"`.
     </description>
+    <dependencies>
+          <dependency id="git.install" version="2.5.0" />
+        </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
