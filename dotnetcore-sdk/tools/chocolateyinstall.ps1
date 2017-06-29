@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'dotnetcore-sdk'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://go.microsoft.com/fwlink/?LinkID=847102'
-$url64      = 'https://go.microsoft.com/fwlink/?LinkID=847097'
+$url      = 'https://download.microsoft.com/download/B/9/F/B9F1AF57-C14A-4670-9973-CDF47209B5BF/dotnet-dev-win-x86.1.0.4.exe'
+$url64    = 'https://download.microsoft.com/download/B/9/F/B9F1AF57-C14A-4670-9973-CDF47209B5BF/dotnet-dev-win-x64.1.0.4.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -18,9 +18,9 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 
   softwareName  = 'dotnet-core*'
-  checksum      = 'C49B7D709F3C505D469B6E0D39B906B2D852FBC2727AC1BD2B6F2E8CE37E51C9'
+  checksum      = '296da25ddeb15a3229f008b2b96d5909caec98bd456758f2f520e9b8c88426f2'
   checksumType  = 'sha256'
-  checksum64    = 'B349CF09915C715CD77A66A9F8DCD0649179CBB15231B8698075E4C6F7417677'
+  checksum64    = 'a8b2a928e66eac6ccb939916d55d2d181b8f1433fc1fbf0d894713e8c86c7303'
 }
 
 Install-ChocolateyPackage @packageArgs
