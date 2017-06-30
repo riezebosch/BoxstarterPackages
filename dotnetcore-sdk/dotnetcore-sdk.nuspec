@@ -4,17 +4,13 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>dotnetcore-sdk</id>
-    <title>.NET Core SDK 1.0.3 with .NET Core 1.0.4 &amp; 1.1.1</title>
-    <version>1.1.1.20170508</version>
+    <title>.NET Core SDK 1.0.4</title>
+    <version>1.1.2</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
-    <summary>The installer includes .NET Core SDK 1.0.3, .NET Core 1.0.4 and .NET Core 1.1.1.</summary>
-    <description>
-      .NET Core is a blazing fast, lightweight and modular platform for creating web applications and services that run on Windows, Linux and Mac.
-
-      The installer includes .NET Core SDK 1.0.3, .NET Core 1.0.4 and .NET Core 1.1.1. Runtime-only installers be found on the .NET Core [installer page](https://chocolatey.org/packages/dotnetcore-runtime).
-    </description>
-    <projectUrl>http://dotnet.github.io/</projectUrl>
+    <summary>Installs .NET Core SDK 1.0.4, which includes .NET Core runtimes 1.0.5 and 1.1.2.</summary>
+    <description>Installs .NET Core SDK 1.0.4, which includes .NET Core runtimes 1.0.5 and 1.1.2.</description>
+    <projectUrl>https://www.microsoft.com/net/core</projectUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
     <!--<projectSourceUrl></projectSourceUrl>
     <docsUrl></docsUrl>
@@ -28,7 +24,7 @@
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24215.20160928" />
     </dependencies>
-    <releaseNotes>https://github.com/dotnet/cli/releases/tag/v1.0.3</releaseNotes>
+    <releaseNotes>https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.4.md</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>
