@@ -1,0 +1,3 @@
+[submodule "dotnetcore-chocolateypackages"]
+	path = dotnetcore-chocolateypackages
+	url = https://github.com/jberezanski/dotnetcore-chocolateypackages.git
