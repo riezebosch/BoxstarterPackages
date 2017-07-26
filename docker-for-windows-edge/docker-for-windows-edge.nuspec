@@ -2,26 +2,28 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>docker-for-windows-beta</id>
+    <id>docker-for-windows</id>
     <version>17.06.1.12818-edge</version>
-     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
     <owners>riezebosch</owners>
-    <title>Docker for Windows (Edge)</title>
+    <title>Docker CE for Windows</title>
     <authors>Docker Inc.</authors>
     <projectUrl>https://docker.com</projectUrl>
     <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-for-windows/docker.png</iconUrl>
     <licenseUrl>https://github.com/docker/docker/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>docker-for-windows admin</tags>
-    <summary>Installs Docker for Windows including Docker service.</summary>
+    <summary>The fastest and easiest way to get started with Docker on Windows PC.</summary>
     <description>
-This new installer includes experimental support for Windows Server 2016 as a part of the latest Edge release of Docker for Windows and Engine. 
+Docker CE for Windows is Docker designed to run on Windows 10. It is a native Windows application that provides an easy-to-use development environment for building, shipping and running dockerized apps. Docker CE for Windows uses Windows-native Hyper-V virtualization and networking and is the fastest and most reliable way to develop Docker apps on Windows. Docker CE for Windows supports running both Linux and Windows Docker containers.
 
-Use this channel if you want to get experimental features faster, and can weather some instability and bugs. We collect all usage data on Edge releases across the board. 
+This installer provides the latest Edge release of Docker for Windows and Engine, and typically offers new features in development.
+
+Use this channel if you want to get experimental features faster, and can weather some instability and bugs. We collect all usage data on Edge releases across the board.
+
+Docker for Windows Edge releases now provide experimental support for Windows Server 2016.
 
 Edge builds are released once per month.
-
-**Note: ** The package **always** installs the **latest version**. It's only updated once in a while to match the checksum.
     </description>
     <releaseNotes>https://docs.docker.com/docker-for-windows/release-notes/</releaseNotes>
   </metadata>

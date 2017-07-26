@@ -1,33 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>docker-for-windows</id>
-    <version>17.6.0.12801</version>
-     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
+    <version>17.06.0.12801</version>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
     <owners>riezebosch</owners>
-
-    <title>Docker for Windows (Stable)</title>
+    <title>Docker CE for Windows</title>
     <authors>Docker Inc.</authors>
     <projectUrl>https://docker.com</projectUrl>
     <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-for-windows/docker.png</iconUrl>
     <licenseUrl>https://github.com/docker/docker/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>docker-for-windows admin stable</tags>
-    <summary>Installs Docker for Windows including Docker service.</summary>
+    <tags>docker-for-windows admin</tags>
+    <summary>The fastest and easiest way to get started with Docker on Windows PC.</summary>
     <description>
-This installer is fully baked and tested, and comes with the **latest GA version** of Docker Engine along with [experimental features in Docker Engine](https://github.com/docker/docker/blob/master/experimental/README.md), which are enabled by default and configurable on [Docker Daemon settings for experimental mode](https://docs.docker.com/docker-for-windows/index#daemon-experimental-mode). 
+Docker CE for Windows is Docker designed to run on Windows 10. It is a native Windows application that provides an easy-to-use development environment for building, shipping and running dockerized apps. Docker CE for Windows uses Windows-native Hyper-V virtualization and networking and is the fastest and most reliable way to develop Docker apps on Windows. Docker CE for Windows supports running both Linux and Windows Docker containers.
 
-This is the best channel to use if you want a reliable platform to work with. (Be sure to disable experimental features for apps in production.) 
+This installer is fully baked and tested. This is the best channel to use if you want a reliable platform to work with.
 
-These releases follow a version schedule with a longer lead time than the Edge releases, synched with Docker Engine releases and hotfixes.
-
-On the Stable channel, you can select whether to send usage statistics and other data.
-
-> ## Important Notes:
-> * Docker for Windows requires 64bit Windows 10 Pro, Enterprise and Education (1511 November update, Build 10586 or later) and Microsoft Hyper-V. Please see [What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) for a full list of prerequisites.
-> * You can switch between Edge and Stable versions, but you must have only one app installed at a time. Also, you will need to save images and export containers you want to keep before uninstalling the current version before installing another. For more about this, see the [FAQs about Stable and Edge channels](https://docs.docker.com/docker-for-windows/faqs/#questions-about-stable-and-edge-channels). 
-> * The installer that is used is **always the latest version** and therby not tied to the version of this package.  
+These releases follow the Docker Engine stable releases.
     </description>
     <releaseNotes>https://docs.docker.com/docker-for-windows/release-notes/</releaseNotes>
   </metadata>
