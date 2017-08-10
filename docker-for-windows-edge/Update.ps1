@@ -19,7 +19,7 @@ function global:au_GetLatest {
      # AU uses [Uri]::IsWellFormedUriString whereby spaces are not allowed in the Uri.
      $url = ($download_page | Select-Xml -XPath "//@d4w:url" -Namespace @{ d4w = "http://www.docker.com/docker-for-windows"  }).Node.Value -replace ' ', '%20'
     
-     return @{ Version = "$version-edge"; URL = $url }
+     return @{ Version = "$version-edge"; URL = $url; PackageName = 'docker-for-windows' }
 }
 
 update
