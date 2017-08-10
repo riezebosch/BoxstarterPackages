@@ -1,6 +1,6 @@
 Import-Module au
 
-$releases = "https://download.docker.com/win/stable/appcast.xml"
+$releases = "https://download.docker.com/win/edge/appcast.xml"
 
 function global:au_SearchReplace {
     @{
@@ -17,9 +17,9 @@ function global:au_GetLatest {
      $version = "$($regex.Matches.Groups[1]).$($regex.Matches.Groups[2])"
 
      # AU uses [Uri]::IsWellFormedUriString whereby spaces are not allowed in the Uri.
-     $url = ($download_page | Select-Xml -XPath "//@url").Node.Value -replace ' ', '%20'
+     $url = ($download_page | Select-Xml -XPath "//@d4w:url" -Namespace @{ d4w = "http://www.docker.com/docker-for-windows"  }).Node.Value -replace ' ', '%20'
     
-     return @{ Version = $version; URL = $url }
+     return @{ Version = "$version-edge"; URL = $url }
 }
 
 update
