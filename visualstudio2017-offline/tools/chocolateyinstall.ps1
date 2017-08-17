@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'visualstudio2017-offline'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileLocation = "K:\VS2017\vs_Enterprise.exe"
+$fileLocation = "K:\VS2017\vs_setup.exe"
 
 $packageArgs = @{
   packageName   = $packageName
