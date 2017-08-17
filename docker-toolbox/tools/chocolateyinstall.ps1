@@ -4,18 +4,18 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'docker-toolbox'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://download.docker.com/win/stable/DockerToolbox.exe'
+$url        = 'https://github.com/docker/toolbox/releases/download/v17.06.0a-ce/DockerToolbox-17.06.0a-ce.exe'
+$checksum  =  '56eaf211f66b30c18de616d8bd710e377d153c65a340deaae791e10a61727b51'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'EXE'
   url           = $url
-  url64bit      = $url64
 
   softwareName  = 'docker-toolbox*'
 
-  checksum      = 'F81F859F68989007F1DA0204F170A9C98FD7B65A7C2DB40398739D7C8DEC29E8'
+  checksum      = $checksum
   checksumType  = 'sha256'
 
   silentArgs    = "/COMPONENTS=`"docker,dockermachine,dockercompose`" /TASKS=`"modifypath,upgradevm`" /silent /norestart /log=`"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).log`""
