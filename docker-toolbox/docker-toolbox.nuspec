@@ -6,7 +6,7 @@
     <version>17.05.0</version>
     <title>Docker Toolbox</title>
     <projectUrl>https://docker.com</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-toolbox/docker_tooblox_0.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-toolbox/docker_toolbox_0.png</iconUrl>
     <licenseUrl>https://github.com/docker/docker/blob/master/LICENSE</licenseUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
     <owners>riezebosch</owners>
