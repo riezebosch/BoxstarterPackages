@@ -22,7 +22,7 @@
     <copyright>.NET Foundation</copyright>
     <licenseUrl>https://github.com/aspnet/Home/blob/dev/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/dotnetcore-runtime/icon/dotnet_logo.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/dotnetcore-sdk/icon/dotnet_logo.png</iconUrl>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24215.20160928" />
     </dependencies>
