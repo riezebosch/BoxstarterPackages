@@ -1,6 +1,10 @@
 Import-Module au
 
-$releases = "https://www.microsoft.com/net/download/core#/sdk"
+$releases = "https://www.microsoft.com/net/download/core"
+
+$versionpattern = '(?<=<th>.*)\d\.\d(\.\d){0,2}(?=\s+SDK</th>)';        # <TH> with SDK in it
+$url32pattern = '(?<=href=[''"]).*dotnet-sdk.*-win-x86\.exe(?=[''"])'   # href with dotnet-sdk x86.exe
+$url64pattern = '(?<=href=[''"]).*dotnet-sdk.*-win-x64\.exe(?=[''"])'   # href with dotnet-sdk x64.exe
 
 function global:au_SearchReplace {
     @{
@@ -15,19 +19,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-     $download_page = Invoke-WebRequest -Uri $releases
+    # use basic parsing because of IE security issues: 
+    #   https://github.com/chocolatey/chocolatey-coreteampackages/issues/382
+     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-     # select <TH> containing SDK and extract version from it
-     ($download_page.AllElements | ? tagName -eq TH | ? innerHtml -match 'SDK').innerText -match '\d\.\d(\.d){0,2}'
-     $version = $Matches[0]
-
-     # Add trailing .0 when version is only x.x
-     if ($Matches.Count -eq 1) {
-         $version = "$version.0"
-     }
-
-     $url32 = ($download_page.links | ? href -match 'dotnet-sdk.*-win-x86\.exe$').href
-     $url64 = ($download_page.links | ? href -match 'dotnet-sdk.*-win-x64\.exe$').href
+     $version = ($download_page.RawContent | select-string -AllMatches $versionpattern).Matches.Value
+     $url32   = ($download_page.RawContent | select-string -AllMatches $url32pattern).Matches.Value     
+     $url64   = ($download_page.RawContent | select-string -AllMatches $url64pattern).Matches.Value     
 
      return @{ Version = $version; URL32 = $url32; URL64 = $url64 }
 }
