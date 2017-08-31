@@ -15,15 +15,11 @@
     <tags>docker-for-windows admin</tags>
     <summary>The fastest and easiest way to get started with Docker on Windows PC.</summary>
     <description>
-Docker CE for Windows is Docker designed to run on Windows 10. It is a native Windows application that provides an easy-to-use development environment for building, shipping and running dockerized apps. Docker CE for Windows uses Windows-native Hyper-V virtualization and networking and is the fastest and most reliable way to develop Docker apps on Windows. Docker CE for Windows supports running both Linux and Windows Docker containers.
+Docker CE for Windows is Docker designed to run on Windows 10. It is a native Windows application that provides an easy-to-use development environment for building, shipping, and running dockerized apps. Docker CE for Windows uses Windows-native Hyper-V virtualization and networking and is the fastest and most reliable way to develop Docker apps on Windows. Docker CE for Windows supports running both Linux and Windows Docker containers.
 
-This installer provides the latest Edge release of Docker for Windows and Engine, and typically offers new features in development.
+## Edge channel
 
-Use this channel if you want to get experimental features faster, and can weather some instability and bugs. We collect all usage data on Edge releases across the board.
-
-Docker for Windows Edge releases now provide experimental support for Windows Server 2016.
-
-Edge builds are released once per month.
+Use the Edge channel if you want to get experimental features faster, and can weather some instability and bugs.
     </description>
     <releaseNotes>https://docs.docker.com/docker-for-windows/release-notes/</releaseNotes>
   </metadata>
