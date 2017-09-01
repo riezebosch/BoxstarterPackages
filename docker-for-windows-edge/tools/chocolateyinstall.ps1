@@ -2,8 +2,8 @@
 
 $packageName= 'docker-for-windows-edge'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://download.docker.com/win/edge/12818/Docker%20for%20Windows%20Installer.exe'
-$checksum   = '65d962a94ddfd0018ecceadb06c870c0ffdf6b6748aee31cacd8c087efe4743a'
+$url        = 'https://download.docker.com/win/edge/13125/Docker%20for%20Windows%20Installer.exe'
+$checksum   = '5d5b2257f358aa0f37b26d1e290038be9486f4d693eddb953d9e0eea9c3b0ad4'
 
 $packageArgs = @{
   packageName   = $packageName
