@@ -5,10 +5,10 @@ $fileFullPath = "$tempDir\SQLManagementStudio.exe"
 $extractPath = "$tempDir\SQLManagementStudio"
 $setupPath = "$extractPath\setup.exe"
 $silentArgs = "/IACCEPTSQLSERVERLICENSETERMS /FEATURES=Tools /Q /ACTION=uninstall"
-$url = "http://care.dlservice.microsoft.com/dl/download/E/A/E/EAE6F7FC-767A-4038-A954-49B8B05D04EB/MgmtStudio%2032BIT/SQLManagementStudio_x86_ENU.exe"
-$checksum = '66ba5e061c08d60bbadd0ffad9847cbb67e7164a56ac9585d3594e7bf7456e80'
-$url64 = "http://care.dlservice.microsoft.com/dl/download/E/A/E/EAE6F7FC-767A-4038-A954-49B8B05D04EB/MgmtStudio%2064BIT/SQLManagementStudio_x64_ENU.exe"
-$checksum64 = 'fd9ab5f8c889c95e9eed341c08a1e0c8f353acc4fff57b89df0101cf4aa5f967'
+$url = "https://download.microsoft.com/download/2/A/5/2A5260C3-4143-47D8-9823-E91BB0121F94/SQLManagementStudio_x86_ENU.exe"
+$checksum = '8a3603ec1afe4320e4ad2685e194196584d79a7f2f5057ed4658913d6722e98a'
+$url64 = "https://download.microsoft.com/download/2/A/5/2A5260C3-4143-47D8-9823-E91BB0121F94/SQLManagementStudio_x64_ENU.exe"
+$checksum64 = 'b6451e433ae06b3bc6337b641e167a3b240eaf9ae2ae14449672f5f1ca7112fc'
 
 # Using the same download location as Install-ChocolateyPackage but need to create the directory first
 if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
