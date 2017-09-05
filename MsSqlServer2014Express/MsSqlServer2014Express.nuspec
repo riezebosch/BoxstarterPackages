@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MsSqlServer2014Express</id>
-    <version>12.2.5000.20160811</version>
+    <version>12.2.5000.20170905</version>
     <title>SQL Server 2014 Express with SP2</title>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
@@ -14,7 +14,7 @@
       This package installs SQL Server 2014 Express with SP2. You can use install arguments to add additional arguments or override arguments to supply specific arguments.
     </description>
     <summary>Installs SQL Server 2014 Express with SP2</summary>
-    <releaseNotes>Update download url for SP2 release.</releaseNotes>
+    <releaseNotes>Uninstall script fixed</releaseNotes>
     <copyright />
     <language>en-US</language>
     <tags>mssql sql server 2014 express sp2</tags>
