@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>dotnetcore-sdk</id>
     <title>.NET Core SDK</title>
-    <version>2.0.0</version>
+    <version>2.0.0.20170905</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
     <summary>The SDK includes the runtime and command line tools for creating .NET Core applications</summary>
@@ -25,6 +25,7 @@
     <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/dotnetcore-sdk/icon/dotnet_logo.png</iconUrl>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24215.20160928" />
+      <dependency id="KB2533623" version="1.0.2" />
     </dependencies>
     <releaseNotes>https://github.com/dotnet/core/blob/master/release-notes/</releaseNotes>
     <!--<provides></provides>-->
