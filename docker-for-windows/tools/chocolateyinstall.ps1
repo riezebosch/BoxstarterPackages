@@ -8,7 +8,7 @@ $checksum   = '138f1f91395408face61068e3d5eea3074359e438feb53630fa6212b6ef474b4'
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'MSI'
+  fileType      = 'EXE'
   url           = $url
 
   softwareName  = 'docker*'
