@@ -1,0 +1,10 @@
+<Configuration>
+	<Package Id="sts">
+		<Setting Id="SETUPTYPE" Value="CLEAN_INSTALL"/>
+	</Package>
+
+	<Logging Type="verbose" Path="%temp%" Template="Microsoft SharePoint Foundation 2013  Setup *.log"/>
+	<Setting Id="UsingUIInstallMode" Value="0"/>
+	<Setting Id="SETUP_REBOOT" Value="Never" />
+	<Display Level="Basic" CompletionNotice="No" AcceptEULA="Yes" />
+</Configuration>
