@@ -17,12 +17,15 @@ Write-Host "Extracting..."
 $extractPath = "$tempDir\sharepoint"
 Start-Process "$fileFullPath" "/extract:`"$extractPath`" /quiet" -Wait
 
+# https://support.microsoft.com/en-us/help/3087184/sharepoint-2013-or-project-server-2013-setup-error-if-the--net-framewo
+Write-Host "Installer patch..."
+$patchPath = "$tempDir\wsssetup_15-0-4709-1000_x64.zip"
+Invoke-WebRequest -Uri "https://download.microsoft.com/download/3/6/2/362c4a9c-4afe-425e-825f-369d34d64f4e/wsssetup_15-0-4709-1000_x64.zip" -OutFile $patchPath
+& "$toolsDir\7z.exe" x -aoa $patchPath -o"$extractPath\updates" | Out-Null
+
 Write-Host "Prereq..."
 Start-Process "$extractPath\prerequisiteinstaller.exe" "/unattended" -Wait
 
 Write-Host "Installing..."
 $setupPath = "$extractPath\setup.exe"
 Install-ChocolateyInstallPackage $packageName "EXE" "/config $toolsDir\config.xml" $setupPath -validExitCodes @(0, 3010, 1116)
-
-Write-Host "Removing extracted files..."
-Remove-Item -Recurse "$extractPath"
