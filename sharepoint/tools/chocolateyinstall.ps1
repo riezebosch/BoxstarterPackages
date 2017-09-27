@@ -24,7 +24,14 @@ Invoke-WebRequest -Uri "https://download.microsoft.com/download/3/6/2/362c4a9c-4
 & "$toolsDir\7z.exe" x -aoa $patchPath -o"$extractPath\updates" | Out-Null
 
 Write-Host "Prereq..."
-Start-Process "$extractPath\prerequisiteinstaller.exe" "/unattended" -Wait
+$exit = Start-Process "$extractPath\prerequisiteinstaller.exe" "/unattended" -PassThru -Wait
+if ($exit.ExitCode -ne 0) {
+    if ($exit.ExitCode -eq 1001 -or $exit.ExitCode -eq 3010) {
+        throw "Prereq installed but reboot required."
+    } else {
+        throw "Prereq failed with exit code $($exit.ExitCode)."
+    }
+}
 
 Write-Host "Installing..."
 $setupPath = "$extractPath\setup.exe"
