@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'docker-toolbox'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/docker/toolbox/releases/download/v17.06.2-ce/DockerToolbox-17.06.2-ce.exe'
-$checksum  =  'adcfc705e123866de406f682b0b684fe35ea0a846a4d44233c9f4628d5a6eaf1'
+$url        = 'https://github.com/docker/toolbox/releases/download/v17.10.0-ce/DockerToolbox-17.10.0-ce.exe'
+$checksum  =  '348fe4b50926b5d790a190970c95de240172daf956b67b8f0a7d2306cd00e352'
 
 $packageArgs = @{
   packageName   = $packageName
