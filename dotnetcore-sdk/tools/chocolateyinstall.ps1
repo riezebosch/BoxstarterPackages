@@ -3,10 +3,10 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'dotnetcore-sdk'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://download.microsoft.com/download/0/F/D/0FD852A4-7EA1-4E2A-983A-0484AC19B92C/dotnet-sdk-2.0.0-win-x86.exe'
-$checksum   = 'af488629001e60d50bd0ca268de28b2ab97f6c20213be007dda763b93d51c3d4'
-$url64      = 'https://download.microsoft.com/download/0/F/D/0FD852A4-7EA1-4E2A-983A-0484AC19B92C/dotnet-sdk-2.0.0-win-x64.exe'
-$checksum64 = 'cc490d28f55b67185688ff51dc6274aea6a582e47a07e9d084437e940c69f7a0'
+$url        = 'https://download.microsoft.com/download/7/3/A/73A3E4DC-F019-47D1-9951-0453676E059B/dotnet-sdk-2.0.2-win-x86.exe'
+$checksum   = '352bf30e7d4339803cc5ded8d75de72acd26db7aabcc335d6b0fa10fc26719f6f001ec17b7f5bd296057004d8a2bc8e9d34bf47c40e1511dab2668cf4dc1d75b'
+$url64      = 'https://download.microsoft.com/download/7/3/A/73A3E4DC-F019-47D1-9951-0453676E059B/dotnet-sdk-2.0.2-win-x64.exe'
+$checksum64 = '0b3682c4c7b3b81906d3f011d8a45e06ec2470721a21693ad8040502f201008161f1d4ad73e05763386272c50bfe90be4e2a660734096b4d52e4997bb618a80c'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -20,7 +20,7 @@ $packageArgs = @{
 
   softwareName  = 'dotnet-core*'
   checksum      = $checksum
-  checksumType  = 'sha256'
+  checksumType  = 'SHA512'
   checksum64    = $checksum64
 }
 
