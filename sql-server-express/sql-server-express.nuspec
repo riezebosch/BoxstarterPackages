@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sql-server-express</id>
-    <title>Microsoft SQL Server 2016 Express with SP1</title>
-    <version>13.1.4001.0</version>
+    <title>Microsoft SQL Server 2017 Express</title>
+    <version>14.1710.3866.2</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
-    <summary>Installs SQL Server 2016 Express with SP1 database engine.</summary>
+    <summary>Installs SQL Server 2017 Express database engine.</summary>
     <description>
-      Entry-level, free database that is ideal for deploying small databases in production environments. Build desktop and small server, data-driven applications up to 10 GB of disk size.
+      Build small, data-driven web and mobile applications up to 10 GB in size with this free, entry-level database.
     </description>
     <projectUrl>https://www.microsoft.com/en-us/sql-server/sql-server-editions-express</projectUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
