@@ -19,7 +19,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
     <dependencies>
-      <dependency id="vcredist2013" version="12.0.30501.20150616" />
+      <dependency id="vcredist2015" version="14.0.24215.20170201" />
       <dependency id="KB2919355" version="1.0.20160719" />
     </dependencies>
     <releaseNotes>https://support.microsoft.com/en-us/kb/3182545</releaseNotes>
