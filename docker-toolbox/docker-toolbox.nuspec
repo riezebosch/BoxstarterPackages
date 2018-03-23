@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>docker-toolbox</id>
-    <version>18.02.0</version>
+    <version>18.03.0</version>
     <title>Docker Toolbox</title>
     <projectUrl>https://docker.com</projectUrl>
     <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-toolbox/docker_toolbox_0.png</iconUrl>
