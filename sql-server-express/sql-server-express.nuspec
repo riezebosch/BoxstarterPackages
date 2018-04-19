@@ -4,7 +4,7 @@
   <metadata>
     <id>sql-server-express</id>
     <title>Microsoft SQL Server 2017 Express</title>
-    <version>14.1710.3866.2</version>
+    <version>14.1801.3958.1</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
     <summary>Installs SQL Server 2017 Express database engine.</summary>
