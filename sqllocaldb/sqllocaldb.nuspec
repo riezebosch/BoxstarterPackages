@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>sqllocaldb</id>
+    <version>14.0.1000.169</version> 
+    <title>SQL Server 2017 Express LocalDB</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoft.com/en-us/sql-server/sql-server-editions-express</projectUrl>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
+    <tags>sqllocaldb sql server localdb</tags>
+    <summary>Install Microsoft SQL Server Express LocalDB.</summary>
+    <description>
+Microsoft SQL Server 2016 Express LocalDB is a feature of [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.
+
+**LocalDB** installation copies a minimal set of files necessary to start the SQL Server Database Engine. Once LocalDB is installed, you can initiate a connection using a special connection string. When connecting, the necessary SQL Server infrastructure is automatically created and started, enabling the application to use the database without complex configuration tasks. Developer Tools can provide developers with a SQL Server Database Engine that lets them write and test Transact-SQL code without having to manage a full server instance of SQL Server.
+    </description>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
+    <docsUrl>https://docs.microsoft.com/en-us/sql/tools/sqllocaldb-utility</docsUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
