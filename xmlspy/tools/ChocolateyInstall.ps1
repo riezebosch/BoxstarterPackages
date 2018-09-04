@@ -1,13 +1,12 @@
 ﻿
 $ErrorActionPreference = 'Stop';
 
-
 $packageName= 'xmlspy'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.altova.com/download/2017r3sp1/default.asp?product=x&amp;edition=e&amp;server=us'
-$checksum   = '220b5e81d29294fb854cbf70d5ac1d875c06a296f5272496c9055b880e52e19d'
-$url64      = 'https://www.altova.com/download/2017r3sp1/default.asp?product=x&amp;edition=e&amp;server=us&bit=64'
-$checksum64 = '374a3942d7158f3428c07279cbaf542f4254e620aa43de92e1dfa6d471e6b0ba'
+$url        = 'https://cdn.sw.altova.com/v2018r2sp1/en/XMLSpyEnt2018rel2sp1.exe'
+$checksum   = '2e08c1a752ee2e33e413a20666623f585012ab740f815553dcb266904f29507a'
+$url64      = 'https://cdn.sw.altova.com/v2018r2sp1/en/XMLSpyEnt2018rel2sp1_x64.exe'
+$checksum64 = 'b0c3d188dc6c505b96f39bf49d1210446e26ba9b535346d280c97fe59c88799d'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -40,16 +39,3 @@ Finally {
 	Remove-Item -Path $path -Recurse -ea SilentlyContinue
 	Rename-Item -Path "$path BAK"  -NewName $key -ea SilentlyContinue
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName = 'xmlspy'
-$softwareName = 'Altova XMLSpy 2017*'
+$softwareName = 'Altova XMLSpy 2018*'
 $installerType = 'MSI' 
 
 $silentArgs = '/qn'
