@@ -1,6 +1,6 @@
 Import-Module au
 
-$releases = "https://github.com/docker/toolbox/releases/latest"
+$releases = "https://api.github.com/repos/docker/toolbox/releases"
 
 function global:au_SearchReplace {
     @{
@@ -12,14 +12,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-     $latest = iwr -Uri $releases
-
-     ($latest.AllElements | ? class -Match release-title).InnerText -match '(?<=v)\d+\.\d+\.\d+'
-     $version = $Matches[0]
-
-     $url32 = "https://github.com$(($latest.Links | ? href -match \.exe$).href)"
-
-     return @{ Version = $version; URL32 = $url32; }
+    $latest = (Invoke-RestMethod -Uri $releases) | ?{ $_.prerelease -eq $false } | select -First 1
+    $version = $latest.tag_name -replace 'v(\d+.\d+.\d+)', '$1'
+    $asset = $latest.assets | ?{ $_.name -match '\.exe$' }
+     
+     return @{ Version = $version; URL32 = $asset.browser_download_url; }
 }
 
 update
