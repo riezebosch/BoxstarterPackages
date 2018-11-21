@@ -3,19 +3,25 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>docker-for-windows</id>
-    <version>18.06.1.19507</version>
+    <version>0.0.0.0</version>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages/</packageSourceUrl>
     <owners>riezebosch</owners>
-    <title>Docker CE for Windows</title>
+    <title>Docker Desktop</title>
     <authors>Docker Inc.</authors>
-    <projectUrl>https://docker.com</projectUrl>
+    <projectUrl>https://www.docker.com/products/docker-desktop</projectUrl>
     <iconUrl>http://cdn.rawgit.com/riezebosch/BoxstarterPackages/master/docker-for-windows/docker.png</iconUrl>
     <licenseUrl>https://github.com/docker/docker/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>docker-for-windows admin</tags>
-    <summary>The fastest and easiest way to get started with Docker on Windows PC.</summary>
+    <tags>docker-for-windows docker-desktop docker admin</tags>
+    <summary>A complete and easy-to-install desktop application for building, debugging and testing containerized apps on Windows.</summary>
     <description>
-Docker CE for Windows is Docker designed to run on Windows 10. It is a native Windows application that provides an easy-to-use development environment for building, shipping, and running dockerized apps. Docker CE for Windows uses Windows-native Hyper-V virtualization and networking and is the fastest and most reliable way to develop Docker apps on Windows. Docker CE for Windows supports running both Linux and Windows Docker containers.
+Docker Desktop is an easy-to-install application for your Mac or Windows environment that enables you to start coding and containerizing in minutes. Docker Desktop includes everything you need to build, test and ship containerized applications right from your machine.
+
+Benefits include:
+
+* 1-click installation and setup of a complete Docker development environment for Mac or Windows
+* Integrated tools including the Docker command line, Docker Compose and kubectl command line
+* Ability to start/stop with a single click
 
 ## Stable channel
 
