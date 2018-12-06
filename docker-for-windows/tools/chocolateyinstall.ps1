@@ -1,0 +1,1 @@
+﻿Write-Warning 'This package is superseeded by docker-desktop, you should install that package from now on.'
