@@ -2,7 +2,7 @@
 
 $ErrorActionPreference = 'Stop';
 
-$packageName = 'docker-for-windows'
+$packageName = 'docker-desktop'
 $softwareName = 'docker*'
 $installerType = 'EXE' 
 
