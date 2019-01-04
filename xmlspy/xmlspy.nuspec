@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
-    <title>Altova XMLSpy 2018 Enterprise (Install)</title>
-    <version>2018.2.1</version>
+    <title>Altova XMLSpy 2019 Enterprise (Install)</title>
+    <version>2019.1.1</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
@@ -19,7 +19,7 @@
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>xmlspy altova 2018 admin trial</tags>
+    <tags>xmlspy altova 2019 admin trial</tags>
     <!--<copyright></copyright>-->
     <licenseUrl>http://www.altova.com/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
