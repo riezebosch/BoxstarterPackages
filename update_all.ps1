@@ -81,6 +81,8 @@ $Options = [ordered]@{
         $global:au_Force   = $true
         $global:au_Version = ($p -split ':')[1]
     }
+
+    PushAll = $true
 }
 
 if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }

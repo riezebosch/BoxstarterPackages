@@ -1,7 +1,5 @@
 Import-Module au
 
-$releases = "https://download.docker.com/win/stable/appcast.xml"
-
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
@@ -11,15 +9,30 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_GetLatest {
+function global:EntryToData($channel) {
+    $releases = "https://download.docker.com/win/$channel/appcast.xml"
+    "$releases"
+
     [xml]$download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+
+    # Strip of build number from version
     $download_page.rss.channel.item.title -match '\d+\.\d+\.\d+\.\d+'
     $version = $Matches[0]
 
-    # AU uses [Uri]::IsWellFormedUriString whereby spaces are not allowed in the Uri.
-    $url = ($download_page | Select-Xml -XPath "//@d4w:url" -Namespace @{ d4w = "http://www.docker.com/docker-for-windows"  }).Node.Value -replace ' ', '%20'
-   
-    return @{ Version = $version; URL = $url; PackageName = 'docker-desktop' }
+    if ($channel -ne 'stable') {
+        $version += "-$channel"
+    }
+
+    return @{ Version = $version; URL = $download_page.rss.channel.link }
+}
+
+function global:au_GetLatest {
+      @{
+         Streams = [ordered] @{
+            'stable' = EntryToData('stable')
+            'edge' = EntryToData('edge')
+         }
+      }
 }
 
 update
