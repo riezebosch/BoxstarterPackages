@@ -4,7 +4,7 @@
   <metadata>
     <id>sql-server-express</id>
     <title>Microsoft SQL Server 2017 Express</title>
-    <version>14.1801.3958.1</version>
+    <version>2017.140.0.169</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
     <summary>Installs SQL Server 2017 Express database engine.</summary>
@@ -22,7 +22,7 @@
       <dependency id="vcredist2015" version="14.0.24215.20170201" />
       <dependency id="KB2919355" version="1.0.20160719" />
     </dependencies>
-    <releaseNotes>https://support.microsoft.com/en-us/kb/3182545</releaseNotes>
+    <releaseNotes>Fix uninstall script, bumped version to installer file version.</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
