@@ -7,7 +7,7 @@
     <authors>SmartBear Software</authors>
     <owners>DanyO riezebosch</owners>
     <projectUrl>http://www.soapui.org/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/riezebosch/BoxstarterPackages/master/soapui/soapui.png</iconUrl>
+    <iconUrl>https://raw.githack.com/riezebosch/BoxstarterPackages/master/soapui/soapui.png</iconUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
     <releaseNotes>https://www.soapui.org/downloads/latest-release/release-notes.html</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
