@@ -5,10 +5,10 @@ $fileFullPath = "$tempDir\SQLEXPR.exe"
 $extractPath = "$tempDir\SQLEXPR"
 $setupPath = "$extractPath\setup.exe"
 $silentArgs = "/IACCEPTSQLSERVERLICENSETERMS /Q /ACTION=install /INSTANCEID=SQLEXPRESS /INSTANCENAME=SQLEXPRESS /UPDATEENABLED=FALSE"
-$url = "https://download.microsoft.com/download/2/A/5/2A5260C3-4143-47D8-9823-E91BB0121F94/SQLEXPR_x86_ENU.exe"
-$url64 = "https://download.microsoft.com/download/2/A/5/2A5260C3-4143-47D8-9823-E91BB0121F94/SQLEXPR_x64_ENU.exe"
-$checksum = '0eff1354916410437c829e98989e5910d9605b2df31977bc33ca492405a0a9ab'
-$checksum64 = 'cc35e94030a24093a62e333e900c2e3c8f1eb253a5d73230a9f5527f1046825b'
+$url = "https://download.microsoft.com/download/3/9/F/39F968FA-DEBB-4960-8F9E-0E7BB3035959/SQLEXPR_x86_ENU.exe"
+$url64 = "https://download.microsoft.com/download/3/9/F/39F968FA-DEBB-4960-8F9E-0E7BB3035959/SQLEXPR_x64_ENU.exe"
+$checksum = 'b5a5e640563485013bf7c11b3751dc15b1f46955141ce74b1c36758c20fb239e'
+$checksum64 = 'e8d8330e3e7d6f9242e658315b99aace4aabb71ed14f3ec465e4450d66d255b6'
 
 # Using the same download location as Install-ChocolateyPackage but need to create the directory first
 if (![System.IO.Directory]::Exists($tempDir)) { [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null }
