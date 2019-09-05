@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MsSqlServer2014Express</id>
-    <version>12.2.5000.20170905</version>
-    <title>SQL Server 2014 Express with SP2</title>
+    <version>12.2.5000.20190905</version>
+    <title>SQL Server 2014 Express</title>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
     <projectUrl>http://msdn.microsoft.com/nl-nl/evalcenter/dn434042.aspx</projectUrl>
@@ -11,10 +11,10 @@
     <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      This package installs SQL Server 2014 Express with SP2. You can use install arguments to add additional arguments or override arguments to supply specific arguments.
+      This package installs SQL Server 2014 Express. You can use install arguments to add additional arguments or override arguments to supply specific arguments.
     </description>
-    <summary>Installs SQL Server 2014 Express with SP2</summary>
-    <releaseNotes>Uninstall script fixed</releaseNotes>
+    <summary>Installs SQL Server 2014 Express</summary>
+    <releaseNotes>SP3</releaseNotes>
     <copyright />
     <language>en-US</language>
     <tags>mssql sql server 2014 express sp2</tags>
