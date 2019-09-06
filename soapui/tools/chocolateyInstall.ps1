@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://s3.amazonaws.com/downloads.eviware/soapuios/5.5.0/SoapUI-x32-5.5.0.exe'
-$url64      = 'https://s3.amazonaws.com/downloads.eviware/soapuios/5.5.0/SoapUI-x64-5.5.0.exe'
+$url        = 'http://dl.eviware.com/soapuios/5.5.0/SoapUI-x32-5.5.0.exe'
+$url64      = 'http://dl.eviware.com/soapuios/5.5.0/SoapUI-x64-5.5.0.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
