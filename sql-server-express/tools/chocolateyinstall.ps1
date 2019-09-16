@@ -3,7 +3,7 @@
 $packageName= 'sql-server-express'
 $url        = ''
 $url64      = 'https://download.microsoft.com/download/E/F/2/EF23C21D-7860-4F05-88CE-39AA114B014B/SQLEXPR_x64_ENU.exe'
-$checksum   = '71321559eff923066799d7fc26b6c7aedd41eee1'
+$checksum   = 'e0a5a388255244f1f5eb2fbf46bdc7292f7e3d8e'
 $silentArgs = "/IACCEPTSQLSERVERLICENSETERMS /Q /ACTION=install /INSTANCEID=SQLEXPRESS /INSTANCENAME=SQLEXPRESS /UPDATEENABLED=FALSE"
 
 $tempDir = Join-Path (Get-Item $env:TEMP).FullName "$packageName"
