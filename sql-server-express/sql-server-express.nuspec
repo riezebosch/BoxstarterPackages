@@ -3,26 +3,24 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sql-server-express</id>
-    <title>Microsoft SQL Server 2017 Express</title>
-    <version>2017.20190916</version>
+    <title>Microsoft SQL Server 2019 Express</title>
+    <version>2019.20190106</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
-    <summary>Installs SQL Server 2017 Express database engine.</summary>
+    <summary>Installs SQL Server 2019 Express database engine.</summary>
     <description>
-      Build small, data-driven web and mobile applications up to 10 GB in size with this free, entry-level database.
+      Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, SQL Server Express can be seamlessly upgraded to other higher end versions of SQL Server. SQL Server Express LocalDB is a lightweight version of Express that has all of its programmability features, runs in user mode and has a fast, zero-configuration installation and a short list of prerequisites.
     </description>
-    <projectUrl>https://www.microsoft.com/en-us/sql-server/sql-server-editions-express</projectUrl>
+    <projectUrl>https://www.microsoft.com/en-us/sql-server/sql-server-downloads</projectUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
-    <tags>sql server express admin 2016 express SP1</tags>
-    <copyright>2016 Microsoft</copyright>
+    <tags>sql server express admin 2019 express</tags>
+    <copyright>2019 Microsoft</copyright>
     <licenseUrl>http://download.microsoft.com/download/F/D/5/FD5E5C28-6973-4273-8737-D69AA3BEA243/SQL_Server_2016_Licensing_Datasheet_EN_US.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/59ad5e2e32c52fd2a45a9735f95a81368f9e5e85/icons/microsoft-sql-server.svg</iconUrl>
     <dependencies>
-      <dependency id="vcredist2015" version="14.0.24215.20170201" />
-      <dependency id="KB2919355" version="1.0.20160719" />
     </dependencies>
-    <releaseNotes>Fix uninstall script, bumped version to installer file version.</releaseNotes>
+    <releaseNotes>2019</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
