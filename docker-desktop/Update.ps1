@@ -10,7 +10,7 @@ function global:au_SearchReplace {
 }
 
 function global:EntryToData($channel) {
-    $releases = "https://download.docker.com/win/$channel/appcast.xml"
+    $releases = "https://desktop.docker.com/win/$channel/appcast.xml"
     [xml]$download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     # Strip of build number from version
