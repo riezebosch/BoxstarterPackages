@@ -1,10 +1,7 @@
-﻿
-
-
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'Microsoft SQL Server 2017 LocalDB*'
+  softwareName  = 'Microsoft SQL Server 2019 LocalDB*'
   fileType      = 'MSI'
   silentArgs    = "/qn /norestart"
   validExitCodes= @(0, 3010, 1605, 1614, 1641)
@@ -18,7 +15,7 @@ if ($key.Count -eq 1) {
     $packageArgs['file'] = "$($_.UninstallString)"
     if ($packageArgs['fileType'] -eq 'MSI') {
       $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
-      
+
       $packageArgs['file'] = ''
     }
 
@@ -32,5 +29,3 @@ if ($key.Count -eq 1) {
   Write-Warning "Please alert package maintainer the following keys were matched:"
   $key | % {Write-Warning "- $($_.DisplayName)"}
 }
-
-

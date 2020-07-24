@@ -3,15 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sqllocaldb</id>
-    <version>14.0.1000.169</version> 
-    <title>SQL Server 2017 Express LocalDB</title>
+    <version>15.0.2000.5</version>
+    <title>SQL Server 2019 Express LocalDB</title>
     <authors>Microsoft</authors>
     <projectUrl>https://www.microsoft.com/en-us/sql-server/sql-server-editions-express</projectUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
     <tags>sqllocaldb sql server localdb</tags>
     <summary>Install Microsoft SQL Server Express LocalDB.</summary>
     <description>
-Microsoft SQL Server 2016 Express LocalDB is a feature of [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.
+Microsoft SQL Server Express LocalDB is a feature of [SQL Server Express](https://docs.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-version-15) targeted to developers. It is available on SQL Server Express with Advanced Services.
 
 **LocalDB** installation copies a minimal set of files necessary to start the SQL Server Database Engine. Once LocalDB is installed, you can initiate a connection using a special connection string. When connecting, the necessary SQL Server infrastructure is automatically created and started, enabling the application to use the database without complex configuration tasks. Developer Tools can provide developers with a SQL Server Database Engine that lets them write and test Transact-SQL code without having to manage a full server instance of SQL Server.
     </description>
