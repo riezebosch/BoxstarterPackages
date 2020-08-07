@@ -9,6 +9,7 @@
     <projectUrl>http://www.soapui.org/</projectUrl>
     <iconUrl>https://raw.githack.com/riezebosch/BoxstarterPackages/master/soapui/soapui.png</iconUrl>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
+    <projectSourceUrl>https://github.com/SmartBear/soapui</projectSourceUrl>
     <releaseNotes>https://www.soapui.org/downloads/latest-release/release-notes.html</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SoapUI is a free and open source cross-platform Functional Testing solution. With an easy-to-use graphical interface, and enterprise-class features, SoapUI allows you to easily and rapidly create and execute automated functional, regression, compliance, and load tests. In a single test environment, SoapUI provides complete test coverage and supports all the standard protocols and technologies. There are simply no limits to what you can do with your tests. Meet SoapUI, the world's most complete testing tool!</description>
