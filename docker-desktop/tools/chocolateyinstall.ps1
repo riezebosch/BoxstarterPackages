@@ -2,8 +2,8 @@
 
 $packageName= 'docker-desktop'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://desktop.docker.com/win/edge/47622/Docker%20Desktop%20Installer.exe'
-$checksum   = 'e85089e997272379527692e2f72ee429a9a670ad90277ef91ee98908139451da'
+$url        = 'https://desktop.docker.com/win/edge/47792/Docker%20Desktop%20Installer.exe'
+$checksum   = 'fd2d207f2dffd2fd67c54073200b9adce4c02e94ea78b875646730c14e5784a7'
 
 $packageArgs = @{
   packageName   = $packageName
