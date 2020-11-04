@@ -4,8 +4,8 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
-    <title>Altova XMLSpy 2020 Enterprise rel. 2 sp1 (Install)</title>
-    <version>2020.2.1</version>
+    <title>Altova XMLSpy 2021 Enterprise (Install)</title>
+    <version>2021.1</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
@@ -19,7 +19,7 @@
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>xmlspy altova 2020 admin trial</tags>
+    <tags>xmlspy altova 2021 admin trial</tags>
     <!--<copyright></copyright>-->
     <licenseUrl>http://www.altova.com/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -28,7 +28,7 @@
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
     </dependencies>-->
-    <releaseNotes>http://www.altova.com/releasenotes/Default.aspx</releaseNotes>
+    <releaseNotes>http://www.altova.com/releasenotes</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>
