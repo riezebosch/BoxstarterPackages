@@ -14,7 +14,7 @@ function global:EntryToData($channel) {
     [xml]$download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     # Strip of build number from version
-    if (-Not($download_page.rss.channel.item.title -match '\d+\.\d+\.\d+\.\d+')){
+    if (-Not($download_page.rss.channel.item.title -match '\d+\.\d+\.\d+(\.\d+)?')){
         throw 'invalid version spec'
     }
     $version = $Matches[0]
