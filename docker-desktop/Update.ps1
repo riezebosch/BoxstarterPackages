@@ -13,18 +13,13 @@ function global:EntryToData($channel) {
     $releases = "https://desktop.docker.com/win/$channel/appcast.xml"
     [xml]$download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    # Strip of build number from version
-    if (-Not($download_page.rss.channel.item.title -match '\d+\.\d+\.\d+(\.\d+)?')){
-        throw 'invalid version spec'
-    }
-    $version = $Matches[0]
-
+    $enclosure = $download_page | Select-Xml -XPath "/rss/channel/item/enclosure" | select -Last 1
+    $version = ($enclosure | Select-Xml -XPath "@sparkle:shortVersionString" -Namespace @{ sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" }).Node.Value
     if ($channel -ne 'stable') {
         $version += "-$channel"
     }
 
-    # AU uses [Uri]::IsWellFormedUriString whereby spaces are not allowed in the Uri.
-    $url = ($download_page | Select-Xml -XPath "//@d4w:url" -Namespace @{ d4w = "http://www.docker.com/docker-for-windows"  }).Node.Value -replace ' ', '%20'
+    $url = ($enclosure | Select-Xml -XPath "@d4w:url" -Namespace @{ d4w = "http://www.docker.com/docker-for-windows"  }).Node.Value
 
     @{ Version = $version; URL = $url }
 }
