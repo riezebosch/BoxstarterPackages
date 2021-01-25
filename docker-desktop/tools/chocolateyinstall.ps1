@@ -17,7 +17,7 @@ $packageArgs = @{
   checksumType  = 'sha256'
  
   silentArgs    = "install --quiet"
-  validExitCodes= @(0, 3010, 1641)
+  validExitCodes= @(0, 3010, 1641, 3) # 3 = InstallationUpToDate 
 }
 
 Install-ChocolateyPackage @packageArgs
