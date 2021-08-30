@@ -10,7 +10,7 @@ function global:au_SearchReplace {
 }
 
 function global:EntryToData($channel) {
-    $releases = "https://desktop.docker.com/win/$channel/appcast.xml"
+    $releases = "https://desktop.docker.com/win/$channel/amd64/appcast.xml"
     [xml]$download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $enclosure = $download_page | Select-Xml -XPath "/rss/channel/item/enclosure" | select -Last 1
@@ -28,7 +28,7 @@ function global:au_GetLatest {
       @{
          Streams = [ordered] @{
             'edge' = EntryToData('edge')
-            'stable' = EntryToData('stable')
+            'main' = EntryToData('main')
          }
       }
 }
