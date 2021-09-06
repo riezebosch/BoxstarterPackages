@@ -26,7 +26,7 @@ if ($key.Count -eq 1) {
     }
 
     # remove parameter
-    $file = $file -replace ' uninstall$', '';
+    $file = $file -replace ' "uninstall"$', '';
     write-output "uninstalling from $file"
     Uninstall-ChocolateyPackage -PackageName $packageName `
                                 -FileType $installerType `
