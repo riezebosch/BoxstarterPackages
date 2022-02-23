@@ -1,8 +1,8 @@
 $ErrorActionPreference = 'Stop';
 $Version = "5.7.0"
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://dl.eviware.com/soapuios/$Version/SoapUI-x32-$Version.exe'
-$url64      = 'http://dl.eviware.com/soapuios/$Version/SoapUI-x64-$Version.exe'
+$url        = "http://dl.eviware.com/soapuios/$Version/SoapUI-x32-$Version.exe"
+$url64      = "http://dl.eviware.com/soapuios/$Version/SoapUI-x64-$Version.exe"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
