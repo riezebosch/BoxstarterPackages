@@ -4,8 +4,8 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
-    <title>Altova XMLSpy 2022 Enterprise (Install)</title>
-    <version>2022.0</version>
+    <title>Altova XMLSpy 2022 rel 2 Enterprise (Install)</title>
+    <version>2022.2</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
