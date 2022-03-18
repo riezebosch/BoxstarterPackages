@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 $Version = "5.7.0"
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64      = "http://dl.eviware.com/soapuios/$Version/SoapUI-x64-$Version.exe"
+$url64      = "https://dl.eviware.com/soapuios/$Version/SoapUI-x64-$Version.exe"
 
 
 
@@ -28,7 +28,7 @@ if ($regKey)
   # Throw terminating error if 32bit version of app is installed
   if ($regPath -eq 'HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall')
   {
-    Write-Error ( '"{0}" is installed, the final 32 bit version available is 5.5.0' -f $regKey.DisplayName  ) 
+    Write-Warning ( '"{0}" is installed, the final 32 bit version available is 5.5.0' -f $regKey.DisplayName  ) 
   }
 }
 
