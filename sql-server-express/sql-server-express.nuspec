@@ -4,7 +4,7 @@
   <metadata>
     <id>sql-server-express</id>
     <title>Microsoft SQL Server 2019 Express</title>
-    <version>2019.20200409</version>
+    <version>15.0.2000.5</version>
     <authors>Microsoft</authors>
     <owners>riezebosch</owners>
     <summary>Installs SQL Server 2019 Express database engine.</summary>
