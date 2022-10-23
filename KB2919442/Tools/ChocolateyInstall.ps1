@@ -2,7 +2,12 @@ $kb = "KB2919442"
 $packageName = "KB2919442"
 $silentArgs = "/quiet /norestart /log:`"$env:TEMP\$kb.Install.evt`""
 
-$os = Get-WmiObject -Class Win32_OperatingSystem
+if ($null -ne (Get-Command -Name Get-CimInstance -ErrorAction SilentlyContinue)) {
+    $os = Get-CimInstance -ClassName Win32_OperatingSystem
+} else {
+    $os = Get-WmiObject -Class Win32_OperatingSystem
+}
+
 $version = [Version]$os.Version
 
 if ($version -eq $null -or $version -lt [Version]'6.3' -or $version -ge [Version]'6.4') {

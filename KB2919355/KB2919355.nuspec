@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KB2919355</id>
-        <version>1.0.20160915</version>
+        <version>1.0.20160915.2</version>
         <title>Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014 (KB2919355)</title>
         <authors>Microsoft</authors>
         <owners>Manuel Riezebosch</owners>
