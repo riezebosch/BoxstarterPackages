@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
     <title>Altova XMLSpy 2023 Enterprise (Install)</title>
-    <version>2023.0</version>
+    <version>2023.1</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
