@@ -3,10 +3,10 @@ $ErrorActionPreference = 'Stop';
 
 $packageName= 'xmlspy'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://cdn.sw.altova.com/v2023/en/XMLSpyEnt2023.exe'
-$checksum   = 'ec41a7a07f31c216f125aaebf742354646b5b7bca336f95aa839cf2fa3e4a7eb'
-$url64      = 'https://cdn.sw.altova.com/v2023/en/XMLSpyEnt2023_x64.exe'
-$checksum64 = '959b8bb4bb5888f6d0499463cf8bef041feef0499f607e6e0bc7dc298c781d5e'
+$url        = 'https://cdn.sw.altova.com/v2023sp1/en/XMLSpyEnt2023sp1.exe'
+$checksum   = '981ea3df72544a1333c717dfcd3bbaa69c48a8b1a064c56a12b2430f48c19b8e'
+$url64      = 'https://cdn.sw.altova.com/v2023sp1/en/XMLSpyEnt2023sp1_x64.exe'
+$checksum64 = '51d8543fc44712fba6335f6675c4d8822c941dd23cc571bec29899b18582d056'
 
 $packageArgs = @{
   packageName   = $packageName
