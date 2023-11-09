@@ -4,8 +4,8 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
-    <title>Altova XMLSpy 2023 Enterprise (Install)</title>
-    <version>2023.2</version>
+    <title>Altova XMLSpy 2024 Enterprise (Install)</title>
+    <version>2024.1</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
@@ -19,7 +19,7 @@
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>xmlspy altova 2023 admin trial</tags>
+    <tags>xmlspy altova 2024 admin trial</tags>
     <!--<copyright></copyright>-->
     <licenseUrl>http://www.altova.com/eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
