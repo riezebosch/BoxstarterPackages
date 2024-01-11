@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop'
-$Version = "5.7.0"
+$Version = "5.7.2"
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url64      = "https://dl.eviware.com/soapuios/$Version/SoapUI-x64-$Version.exe"
 
@@ -11,7 +11,7 @@ $packageArgs = @{
   fileType      = 'EXE'
   url64bit      = $url64
   softwareName  = 'soapui*'
-  checksum64    = '86B6E5658886A0876D0196394F91A470E1AF7D62D3067EEB94C1F8C5293D3B18'
+  checksum64    = '3e270e539f6a0f44a3619f2d91ef4d0daa56bfa2230813893295fb7c1da67c49'
   checksumType64= 'sha256'
   silentArgs    = "-q"
   validExitCodes= @(0, 3010, 1641)
