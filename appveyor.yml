@@ -53,6 +53,7 @@ install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
+- choco upgrade chocolatey
 - choco --version
 - ps: |
     git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
