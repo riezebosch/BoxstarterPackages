@@ -2,7 +2,7 @@ Import-Module Chocolatey-AU
 
 # disable the url check since docker is returning 403's for no apparent reasons
 # au is using oldskool WebRequests: https://github.com/chocolatey-community/chocolatey-au/blob/master/src/Private/request.ps1
-function check_url() {
+function global:check_url() {
 }
 
 function global:au_SearchReplace {
