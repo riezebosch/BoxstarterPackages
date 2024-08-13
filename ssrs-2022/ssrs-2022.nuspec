@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ssrs-2022</id>
+    <version>16.0.1115.96</version>
+    <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
+    <owners>riezebosch</owners>
+    <title>Microsoft SQL Server 2022 Reporting Services</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=GoogleCloudTools.cloudcode</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/dgalbraith/chocolatey-packages@7b581b8f8d5d9c933b4dad49d2c9966f3c5bf5e5/icons/ssrs-2019.png</iconUrl>
+    <copyright>Copyright Microsoft Corporation</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/sql-server/sql-server-2022-pricing</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/sql/reporting-services</docsUrl>
+    <tags>ssrs sql sql-server sql-server-2022 2022 reporting microsoft</tags>
+    <summary>SQL Server Reporting Services is a server-based reporting platform that provides comprehensive reporting functionality</summary>
+    <description><![CDATA[SQL Server Reporting Services (SSRS) provides a set of on-premises tools and services that create, deploy, and manage mobile and paginated reports.
+
+## Features
+
+* **"Traditional" paginated reports** so you can create modern-looking reports, with updated tools and new features for creating them.
+* **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.
+* **A modern web portal** you can view in any modern browser. In the new portal, you can organize and display mobile and paginated Reporting Services reports and KPIs. You can also store Excel workbooks on the portal.
+
+## Package Parameters
+
+* `/log file` specifies the setup log file location.  By default log files are created under `%TEMP%`.
+  Example: `/log log.txt`
+* `/InstallFolder` sets the install folder.
+  Default: `"C:\Program Files\Microsoft SQL Server Reporting Services"`
+  Example: `choco install -y ssrs-2022 --package-parameters='"/InstallFolder:"'C:\Program Files\SSRS'""'`
+* `/PID` sets the custom license key.
+  Example: `choco install -y ssrs-2022 --package-parameters='"/PID:12345-12345-12345-12345-12345"'`
+* `/Edition` sets the custom free edition.  Options are `Dev`, `Eval`, or `ExprAdv`.
+  Default: `Eval`
+  Example: `choco install -y ssrs-2022 --package-parameters='"/Edition:Dev"'`
+* `/EditionUpgrade` upgrades the edition of the installed product.  Required `/PID` or `/Edition` flag.
+  Example: `choco install -y ssrs-2022 --package-parameters='"/EditionUpgrade /Edition:Dev"'`
+  Example: `choco install -y ssrs-2022 --package-parameters='"/EditionUpgrade /PID:PID:12345-12345-12345-12345-12345"'`
+
+## Notes
+
+* The Microsoft SQL Server Reporting Services package requires:
+  * .NET Framework 4.7 or newer
+  * A SQL Server Database Engine (2008 R3 SP3 or later), to store the report server database
+* You do not need a SQL Server Database Engine server available at the time of install. You will need one to configure Reporting Services after install.
+* Supported operating systems are Windows Server 2022, Windows Server 2016 and Windows 10.
+* This package is automatically updated using the [Chocolatey Automatic Package Update Model (AU)](https://github.com/majkinetor/au/blob/master/README.md).
+  If you find it is out of date by more than a day or two, please contact the maintainer(s) and let them know the package is no longer updating correctly.
+
+]]></description>
+    <releaseNotes>https://learn.microsoft.com/nl-nl/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs?view=sql-server-ver16#sql-server-2022-reporting-services</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
