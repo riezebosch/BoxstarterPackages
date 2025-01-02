@@ -4,8 +4,8 @@
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>xmlspy</id>
-    <title>Altova XMLSpy 2024 Enterprise (Install)</title>
-    <version>2024.2.1</version>
+    <title>Altova XMLSpy 2025 Enterprise (Install)</title>
+    <version>2025.1</version>
     <authors>Altova</authors>
     <owners>riezebosch</owners>
     <description>
