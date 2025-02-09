@@ -8,8 +8,8 @@ function global:check_url() {
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"           #1
-            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"      #2
+            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.url64bit)'"           #1
+            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.checksum64)'"      #2
         }
     }
 }
@@ -23,7 +23,7 @@ function global:au_GetLatest {
 
     $url = ($enclosure | Select-Xml -XPath "@d4w:url" -Namespace @{ d4w = "http://www.docker.com/docker-for-windows"  }).Node.Value
 
-    @{ Version = $version; URL = $url }
+    @{ Version = $version; url64bit = $url }
 }
 
-update
+Update-Package -ChecksumFor 64
