@@ -68,7 +68,7 @@ install:
 # - cinst chocolatey-core.extension
     
 build_script:
-- pwsh: |
+- ps: |
     $ErrorActionPreference = 'Continue'
 
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
