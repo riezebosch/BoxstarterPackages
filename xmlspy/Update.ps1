@@ -12,6 +12,10 @@ function global:au_SearchReplace {
     }
 }
 
+function DefaultToZero($value) {
+    if ($value) { $value } else { 0 }
+}
+
 function global:au_GetLatest {
     $x86 = Invoke-WebRequest -Uri "https://www.altova.com/ThankYou?productcode=XS&editioncode=E&lang=en&installertype=Product&operatingsystem=win32&FromArchive=true" -UseBasicParsing
     $x86.Content -match '<iframe .* src="(.*)"'
@@ -19,7 +23,10 @@ function global:au_GetLatest {
     $url32 = $matches[1]
     $url32 -match '/v(?<v>\d+)(?:r(?<r>\d+))?(?:sp(?<sp>\d+))?'
 
-    $version = "$($matches['v']).$($matches['r'] ?? 0).$($matches['sp'] ?? 0)"
+    $v = $matches['v']
+    $r = DefaultToZero $matches['r']
+    $sp = DefaultToZero $matches['sp']
+    $version = "$v.$r.$sp"
 
     $x64 = Invoke-WebRequest -Uri "https://www.altova.com/ThankYou?productcode=XS&editioncode=E&lang=en&installertype=Product&operatingsystem=win64&FromArchive=true" -UseBasicParsing
     $x64.Content -match '<iframe .* src="(.*)"'
