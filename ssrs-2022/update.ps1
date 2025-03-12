@@ -1,6 +1,6 @@
-import-module au
+import-module chocolatey-au
 
-$base      = 'https://www.microsoft.com/download/'
+$base      = 'https://www.microsoft.com/en-us/download/'
 $productId = '104502'
 
 $detail       = "${base}details.aspx?id=${productId}"
@@ -15,11 +15,7 @@ function au_BeforeUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\README.md" = @{
-      "$($reversion)" = "$($Latest.Version)"
-    }
-
-    'tools\ChocolateyInstall.ps1' = @{
+    'tools\chocolateyInstall.ps1' = @{
       "(\s*url64bit\s*=\s*)('.*')"       = "`$1'$($Latest.URL64Bit)'"
       "(\s*checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
       "(\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
@@ -29,7 +25,6 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $detail_page   = Invoke-WebRequest -UseBasicParsing -Uri $detail
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $download
 
   $detail_page.Content -match $reversion
   $version = $Matches.Version
@@ -39,7 +34,7 @@ function global:au_GetLatest {
   $filename = $Matches.Executable
   Write-Host "filename: $filename"
   
-  $url = $download_page.Links | where-object { $_ -Match $filename } | Select-Object -ExpandProperty href | Select-Object -First 1
+  $url = $detail_page.Links | where-object { $_ -Match $filename } | Select-Object -ExpandProperty href | Select-Object -First 1
   Write-Host "url: $url"
   
   @{
