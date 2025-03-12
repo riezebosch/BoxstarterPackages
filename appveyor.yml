@@ -21,7 +21,7 @@ environment:
   # Github token to commit pushed packages to repository
   # github_user_repo: {github_user}/{repository}
   github_api_key:
-    secure: jV9nImBrLpFCM/zb3CNpvNQe6BZDs7Llx8TRqq12AVcz1WP0outVsrjW8Kz8z78J #https://ci.appveyor.com/tools/encrypt
+    secure: g7ZXNkL1W/B/MLgT7U9H62ErGIhi02DtHgNDChFJmzqYd1Fwf+0KvAH/X1LHIjk4 #https://ci.appveyor.com/tools/encrypt
 
 
   # Mail credentials - for error notifications
