@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ssrs-2022</id>
-    <version>16.0.1116.38</version>
+    <version>16.0.1117.32</version>
     <packageSourceUrl>https://github.com/riezebosch/BoxstarterPackages</packageSourceUrl>
     <owners>riezebosch</owners>
     <title>Microsoft SQL Server 2022 Reporting Services</title>
