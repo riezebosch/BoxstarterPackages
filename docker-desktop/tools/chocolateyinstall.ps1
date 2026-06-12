@@ -2,13 +2,13 @@
 
 $packageName = 'docker-desktop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64 = 'https://desktop.docker.com/win/main/amd64/227598/Docker%20Desktop%20Installer.exe'
-$checksum64 = 'bd40f52336226d16264806610619659801a35456cfe4637b5cf2e9c01d95e810'
+$url64 = 'https://desktop.docker.com/win/main/amd64/228796/DockerDesktop.msi'
+$checksum64 = '3c43056212bdaa28a888d28d339a30dd53f319151e2d999f8a1f997c69fe12e4'
 
 $packageArgs = @{
   packageName    = $packageName
   unzipLocation  = $toolsDir
-  fileType       = 'EXE'
+  fileType       = 'MSI'
   url64bit       = $url64
 
   softwareName   = 'docker*'
@@ -16,8 +16,8 @@ $packageArgs = @{
   checksum64     = $checksum64
   checksumType64 = 'sha256'
 
-  silentArgs     = "install --quiet"
-  validExitCodes = @(0, 3010, 1641, 3) # 3 = InstallationUpToDate 
+  silentArgs     = "/quiet /norestart"
+  validExitCodes = @(0, 3010, 1641)
 }
 
 Install-ChocolateyPackage @packageArgs

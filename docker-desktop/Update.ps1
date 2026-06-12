@@ -21,8 +21,7 @@ function global:au_GetLatest {
     $enclosure = $download_page | Select-Xml -XPath "/rss/channel/item/enclosure" | select -Last 1
     $version = ($enclosure | Select-Xml -XPath "@sparkle:shortVersionString" -Namespace @{ sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" }).Node.Value
 
-    $buildNumber = ($enclosure | Select-Xml -XPath "@sparkle:version" -Namespace @{ sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" }).Node.Value
-    $url = "https://desktop.docker.com/win/main/amd64/$buildNumber/Docker%20Desktop%20Installer.exe"
+    $url = ($download_page | Select-Xml -XPath "/rss/channel/link").Node.InnerText
 
     @{ Version = $version; url64bit = $url }
 }

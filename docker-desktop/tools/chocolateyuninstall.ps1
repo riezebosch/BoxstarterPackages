@@ -4,13 +4,10 @@ $ErrorActionPreference = 'Stop';
 
 $packageName = 'docker-desktop'
 $softwareName = 'docker*'
-$installerType = 'EXE' 
+$installerType = 'MSI'
 
-$silentArgs = 'uninstall --quiet'
+$silentArgs = '/quiet /norestart'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
-if ($installerType -ne 'MSI') {
-  $validExitCodes = @(0)
-}
 
 $uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
@@ -25,9 +22,6 @@ if ($key.Count -eq 1) {
       $file = ''
     }
 
-    # remove parameter
-    $file = $file -replace ' "uninstall"$', '';
-    write-output "uninstalling from $file"
     Uninstall-ChocolateyPackage -PackageName $packageName `
                                 -FileType $installerType `
                                 -SilentArgs "$silentArgs" `
