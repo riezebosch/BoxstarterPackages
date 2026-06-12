@@ -16,7 +16,7 @@ $packageArgs = @{
   checksum64     = $checksum64
   checksumType64 = 'sha256'
 
-  silentArgs     = "/quiet /norestart"
+  silentArgs     = "/quiet /norestart REMOVEEXISTINGINSTALL=1"
   validExitCodes = @(0, 3010, 1641)
 }
 
