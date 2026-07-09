@@ -15,15 +15,16 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $releases = "https://desktop.docker.com/win/main/amd64/appcast.xml"
-    [xml]$download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $releases = "https://desktop.docker.com/win/main/amd64/appcast.json"
+    $appcast = Invoke-RestMethod -Uri $releases
 
-    $enclosure = $download_page | Select-Xml -XPath "/rss/channel/item/enclosure" | select -Last 1
-    $version = ($enclosure | Select-Xml -XPath "@sparkle:shortVersionString" -Namespace @{ sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" }).Node.Value
+    $item = $appcast.Items | Select-Object -First 1
+    $version = $item.AppVersion
+    $artifact = $item.Artifacts | Where-Object { $_.Type -eq "msi" } | Select-Object -First 1
+    $url = $artifact.URL
+    $checksum = $artifact.Checksum
 
-    $url = ($download_page | Select-Xml -XPath "/rss/channel/link").Node.InnerText
-
-    @{ Version = $version; url64bit = $url }
+    @{ Version = $version; url64bit = $url; checksum64 = $checksum }
 }
 
-Update-Package -ChecksumFor 64
+Update-Package -ChecksumFor none
