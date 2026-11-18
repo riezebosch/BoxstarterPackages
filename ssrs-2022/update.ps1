@@ -9,8 +9,13 @@ $download     = "${base}confirmation.aspx?id=${productId}"
 $reversion    = '(?<Version>([\d]+\.[\d]+\.[\d]+\.[\d]+))'
 $reexecutable = '.*>(?<Executable>(.*?\.exe))<'
 
-function au_BeforeUpdate {
-  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64Bit
+function global:au_BeforeUpdate {
+  $ErrorActionPreference = 'Stop'
+  $checksum = Get-RemoteChecksum $Latest.URL64Bit -Algorithm $Latest.ChecksumType64
+  if ($checksum -notmatch '^[a-fA-F0-9]{64}$') {
+    throw "Failed to calculate a SHA-256 checksum for $($Latest.URL64Bit)"
+  }
+  $Latest.Checksum64 = $checksum
 }
 
 function global:au_SearchReplace {
